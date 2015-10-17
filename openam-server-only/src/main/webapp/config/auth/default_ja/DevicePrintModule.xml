@@ -1,7 +1,7 @@
 <!--
    DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
-   Copyright (c) 2011 ForgeRock AS. All Rights Reserved
+   Copyright (c) 2011-2015 ForgeRock AS. All Rights Reserved
 
    The contents of this file are subject to the terms
    of the Common Development and Distribution License
@@ -22,10 +22,9 @@
   "Portions Copyrighted [year] [name of copyright owner]"
 -->
 <!--
-    Portions Copyrighted 2013 Syntegrity
-    Portions Copyrighted 2013-2014 ForgeRock AS
-    Portions Copyrighted 2014 Nomura Research Institute, Ltd
-    Portions Copyrighted 2014 Open Source Solution Technology Corporation
+    Portions Copyrighted 2013 Syntegrity.
+    Portions Copyrighted 2014-2015 Nomura Research Institute, Ltd.
+    Portions Copyrighted 2014-2015 Open Source Solution Technology Corporation.
 -->
 
 <ModuleProperties moduleName="DevicePrintModule" version="1.0" >
@@ -34,7 +33,7 @@
             <Prompt>Device Print:</Prompt>
         </NameCallback>
     </Callbacks>
-    <Callbacks length="2" order="2" timeout="600" header="このサーバーは HOTP 認証を使用します" >
+    <Callbacks length="2" order="2" timeout="600" header="OpenAM へのサインイン" >
         <PasswordCallback echoPassword="false" >
             <Prompt>OTP コードを入力してください:</Prompt>
         </PasswordCallback>

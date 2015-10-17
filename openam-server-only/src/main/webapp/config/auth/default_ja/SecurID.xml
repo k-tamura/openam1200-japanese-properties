@@ -6,7 +6,8 @@
 -->
 
 <!--
-    Portions Copyrighted 2013 ForgeRock AS
+    Portions Copyrighted 2013-2015 ForgeRock AS.
+    Portions Copyrighted 2015 Nomura Research Institute, Ltd.
 -->
 
 <!DOCTYPE ModuleProperties PUBLIC "=//iPlanet//Authentication Module Properties XML Interface 1.0 DTD//EN"
@@ -14,7 +15,7 @@
 
 
 <ModuleProperties moduleName="SecurID" version="1.0" >
-    <Callbacks length="2" order="1" timeout="120" header="このサーバーは SecurID 認証を使用します" >
+    <Callbacks length="2" order="2" timeout="120" header="OpenAM へのサインイン" >
         <NameCallback>
             <Prompt>ユーザー ID を入力してください</Prompt>
         </NameCallback>

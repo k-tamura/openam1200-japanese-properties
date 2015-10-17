@@ -1,0 +1,549 @@
+{
+  "config": {
+    "dates": {
+      "monthNames" : "1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月",
+      "monthNamesShort" : "1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月",
+      "dayNames" : "日曜日, 月曜日, 火曜日, 水曜日, 木曜日, 金曜日, 土曜日",
+      "dayNamesShort" : "日, 月, 火, 水, 木, 金, 土"
+    },
+    "messages": {
+      "CommonMessages": {
+        "authenticationFailed": "ユーザー名/パスワードの組み合わせが不正です。",
+        "serviceUnavailable" : "サービスが利用できません。",
+        "unknown" : "不明なエラー。システム管理者に問い合わせてください。",
+        "loggedIn" : "正常にログインしました。",
+        "errorFetchingData": "ユーザーデータフェッチ中のエラー。",
+        "loggedOut": "ログアウトしました。",
+        "unauthorized": "不正なアクセスまたはセッションタイムアウトです。",
+        "internalError" : "内部サーバーエラー。",
+        "forbiddenError": "閲覧禁止エラー。",
+        "notFoundError": "未検出エラー。",
+        "badRequestError": "不正リクエストエラー。",
+        "conflictError": "リクエストに競合を検出しました。",
+        "incorrectRevisionError": "バージョンが最新ではないため、レコードを更新できません。",
+        "tokenNotFound": "トークンが見つかりません"
+      },
+      "UserMessages": {
+        "changedPassword" : "パスワードが変更されました。",
+        "profileUpdateFailed" : "プロファイル更新中に問題が発生しました。",
+        "profileUpdateSuccessful" : "プロファイルが更新されました。",
+        "userNameUpdated" : "ユーザー名は正常に更新されました。",
+        "afterRegistration": "ユーザーが正常に登録されました。",
+        "siteIdentificationChanged": "サイトの識別画像が変更されました。",
+        "securityDataChanged": "セキュリティデータが変更されました。",
+        "userAlreadyExists": "ユーザーが既に存在します。",
+        "errorDeletingNotification" : "通知の削除エラー。",
+        "errorFetchingNotifications" : "通知の検索エラー。"
+      },
+      "PolicyMessages": {
+        "applicationCreated": "アプリケーションの作成に成功しました。",
+        "applicationUpdated": "アプリケーションが正常に更新しました。",
+        "referralCreated": "参照が正常に作成しました。",
+        "referralUpdated": "参照が正常に更新しました。",
+        "deleteSuccess": "正常に削除しました。",
+        "deleteFail": "削除に失敗しました。",
+        "policyCreated": "ポリシーの作成に成功しました。",
+        "policyUpdated": "ポリシーを正常に更新しました。",
+        "ruleErrorFullLogical": "親論理コンテナは、子を1つだけ受け入れることができます。",
+        "ruleHelperTryAndOr": "複数の子が必要な場合は、タイプを変更するか、<br>または AND か OR タイプの子を追加してみてください。",
+        "unableToRetrievePolicy": "ポリシーを取得できません。",
+        "invalidResource": "無効なリソースです。",
+        "duplicateResource": "重複するリソースです。",
+        "duplicateAttribute": "重複する属性です。",
+        "duplicateRealm": "重複するレルムです。",
+        "unableToPersistPolicy": "ポリシーをデータストアに永続化することができません。",
+        "policiesUploaded": "ポリシーを正常にアップロードしました。",
+        "policiesUploadFailed": "ポリシーのアップロードに失敗しました。"
+      }
+    },
+    "AppConfiguration": {
+      "Navigation": {
+        "links": {}
+      }
+    }
+  },
+  "templates": {
+    "user": {
+      "LoginDialog": {
+        "refreshOnLogin" : "ログイン時にリフレッシュする必要があります",
+        "sessionEnded": "セッションが終了しました。 要求されたアクションを実行するには、新しいウィンドウでもう一度<a href='%s' target='_new'>ログイン</a>してください。"
+      },
+      "LoginTemplate" : {
+        "loginRemember" : "ユーザー名を記憶する。",
+        "noAccountQuestion" : "アカウントを持っていないですか?",
+        "registerAccount" : "アカウントを登録して下さい。",
+        "problemLoggingQuestion" : "ログインのトラブルがありますか?",
+        "resetPassword" : "パスワードのリセット",
+        "siteIdentificationHeader": "サイトの識別",
+        "siteIdentificationExplanation": "ログイン名を入力してください。<br />サイトの画像とパスフレーズがここに表示されます。"
+      },
+      "404" : {
+        "pageNotFound" : "ページが見つかりません。",
+        "requestedPageCouldNotBeFound" : "要求されたページが見つかりませんでした。"
+      },
+      "DefaultBaseTemplate" : {
+        "orPhone" : "、または電話"
+      },
+      "ChangeSecurityDataDialogTemplate": {
+        "securityDataChange" : "セキュリティデータの変更",
+        "enterNewPasswordToChange" : "パスワードを変更するには、以下のフィールドに新しいパスワードを入力してください。",
+        "selectQuestionAndAnserIfYouWant" : "設定する場合は、質問を選択しその答えを入力してください。",
+        "securityQuestionAndAnserExplanation" : "選択したセキュリティの質問と設定したそれに対する答えは、パスワードを忘れた場合にあなたを特定するために使用されます。"
+
+      },
+      "ChangeSiteIdentificationDialogTemplate": {
+        "siteImageAndPhaseExplanation" : "選択したサイトのイメージとフレーズは、正当なサイトにログインすることを確認するためにログイン時に表示されます。"
+      },
+      "EnterOldPasswordDialog": {
+        "passwordAndSecurityQuestionChange" : "パスワードとセキュリティの質問の変更",
+        "enterYourOldPassword" : "古いパスワードを入力してください。"
+      },
+      "ForgottenPasswordTemplate": {
+        "forgottenPasswordQuestion" : "パスワードを忘れましたか?",
+         "enterLogin" : "継続するには、ユーザー名を入力してください。"
+      },
+      "TermsOfUseTemplate": {
+        "termsOfUse": "利用規約",
+        "termsOfUseContent": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris idvulputate urna. Quisque tristique dictum sodales. Nullam tempus eleifend erat,vel facilisis nibh euismod non. Phasellus vitae elit velit, in sollicitudindiam. Maecenas ornare nunc non ipsum ornare vehicula id sed dolor. Duispellentesque congue sapien, dictum adipiscing est posuere sit amet. Suspendissein lectus lorem. Suspendisse vitae metus sapien, sit amet luctus libero.Integer nec nunc sed massa pellentesque pulvinar. Integer vulputate nunc atnunc lacinia eu luctus neque elementum. Aenean ultricies arcu sed enimultricies blandit placerat ut massa. Donec at dolor sit amet magna vulputateelementum sit amet in sapien. Donec sit amet erat neque.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris idvulputate urna. Quisque tristique dictum sodales. Nullam tempus eleifend erat,vel facilisis nibh euismod non. Phasellus vitae elit velit, in sollicitudindiam. Maecenas ornare nunc non ipsum ornare vehicula id sed dolor. Duispellentesque congue sapien, dictum adipiscing est posuere sit amet. Suspendissein lectus lorem. Suspendisse vitae metus sapien, sit amet luctus libero.Integer nec nunc sed massa pellentesque pulvinar. Integer vulputate nunc atnunc lacinia eu luctus neque elementum. Aenean ultricies arcu sed enimultricies blandit placerat ut massa. Donec at dolor sit amet magna vulputateelementum sit amet in sapien. Donec sit amet erat neque.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris idvulputate urna. Quisque tristique dictum sodales. Nullam tempus eleifend erat,vel facilisis nibh euismod non. Phasellus vitae elit velit, in sollicitudindiam. Maecenas ornare nunc non ipsum ornare vehicula id sed dolor. Duispellentesque congue sapien, dictum adipiscing est posuere sit amet. Suspendissein lectus lorem. Suspendisse vitae metus sapien, sit amet luctus libero.Integer nec nunc sed massa pellentesque pulvinar. Integer vulputate nunc atnunc lacinia eu luctus neque elementum. Aenean ultricies arcu sed enimultricies blandit placerat ut massa. Donec at dolor sit amet magna vulputateelementum sit amet in sapien. Donec sit amet erat neque.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris idvulputate urna. Quisque tristique dictum sodales. Nullam tempus eleifend erat,vel facilisis nibh euismod non. Phasellus vitae elit velit, in sollicitudindiam. Maecenas ornare nunc non ipsum ornare vehicula id sed dolor. Duispellentesque congue sapien, dictum adipiscing est posuere sit amet. Suspendissein lectus lorem. Suspendisse vitae metus sapien, sit amet luctus libero.Integer nec nunc sed massa pellentesque pulvinar. Integer vulputate nunc atnunc lacinia eu luctus neque elementum. Aenean ultricies arcu sed enimultricies blandit placerat ut massa. Donec at dolor sit amet magna vulputateelementum sit amet in sapien. Donec sit amet erat neque.</p>"
+      },
+      "UserProfileTemplate": {
+        "changeSecurityData": "セキュリティデータの変更",
+        "changeSiteIdentification": "サイト ID の変更"
+      },
+      "UserRegistrationTemplate": {
+        "registerYourAccount" : "アカウントの登録",
+        "logIn" : "Log in",
+        "haveAccoutQuestion" : "既にアカウントを持っていますか？",
+        "agreeToTerms": "に同意します。"
+      }
+    }
+  },
+  "common": {
+    "form": {
+      "true" : "真",
+      "false" : "偽",
+      "update" : "更新",
+      "save" : "保存",
+      "create" : "作成",
+      "cancel" : "キャンセル",
+      "close" : "閉じる",
+      "logout" : "ログアウト",
+      "register" : "登録",
+      "home" : "ホーム",
+      "start" : "開始",
+      "continue" : "継続",
+      "back" : "戻る",
+      "delete" : "削除",
+      "details" : "詳細",
+      "pleaseSelect" : "選択してください",
+      "addUser" : "ユーザーの追加",
+      "decision" : "決定",
+      "accept" : "許可",
+      "reject" : "却下",
+      "createdAt" : "に作成されました",
+      "search" : "検索",
+      "submit" : "サブミット",
+      "actions" : "アクション",
+      "complete" : "完了",
+      "reset": "リセット",
+      "copyright": "Copyright &copy; 2010-14 ForgeRock. All rights reserved.",
+      "sessionExpired" : "セッションが期限切れです。",
+      "enableCookies" : "ログインするためには、クッキーを有効にする必要があります。",
+      "reloadGrid": "グリッドのリロード",
+      "clearFilters": "フィルターをクリア",
+      "validation": {
+        "VALID_PHONE_FORMAT": "無効な文字が含まれています。",
+        "VALID_NAME_FORMAT": "無効な文字が含まれています。",
+        "VALID_EMAIL_ADDRESS_FORMAT": "電子メールアドレスが無効です。",
+        "AT_LEAST_X_CAPITAL_LETTERS" : "最低 __numCaps__ capital 文字以上は必要です。",
+        "AT_LEAST_X_NUMBERS" : "少なくとも __numNums__ 個以上は必要です。",
+        "CANNOT_CONTAIN_OTHERS" : "値を含めることはできません: __disallowedFields__",
+        "CANNOT_CONTAIN_CHARACTERS": "Cannot contain characters: __forbiddenChars__",
+        "MIN_LENGTH" : "最低 __minLength__ 文字です。",
+        "REQUIRED" : "空白にすることはできません。",
+        "UNIQUE" : "既に存在します。",
+        "REAUTH_REQUIRED" : "",
+        "formContainsErrors" : "フォームには検証エラーが含まれています。",
+        "atLeastOneCapitalLetter" : "少なくとも大文字が 1 文字以上必要です。",
+        "atLeastOneNumber" : "少なくとも数字が 1 つ以上必要です。",
+        "atLeast8Characters" : "少なくとも 8 文字以上必要です。",
+        "cannotMatchLogin" : "ログインが一致しません。",
+        "confirmationMatchesPassword" : "確認がパスワードと一致します。",
+        "usernameExists" : "ユーザー名は既に存在します。",
+        "emailAddressAlreadyExists" : "電子メールアドレスは既に存在します。",
+        "onlyAlphabeticCharacters" : "英字のみです。",
+        "onlyNumbersAndSpecialCharacters" : "数字と特殊文字のみです。",
+        "cannotMatchOldPassword" : "古いパスワードと一致しません。",
+        "minimum4Characters" : "最小 4 文字です。",
+        "acceptanceRequiredForRegistration" : "登録には受理が必要です。",
+        "incorrectPassword" : "パスワードが正しくありません。",
+        "incorrectSecurityAnswer" : "応答が無効です。",
+        "required" : "必須です。",
+        "emailNotValid" : "メールアドレスが無効です。",
+        "emailExists" : "電子メールアドレスは既に存在します。",
+        "shouldBeLong" : "log 値である必要があります。",
+        "wrongDateFormat" : "フォーマットが不正です。"
+      }
+    },
+    "user" : {
+       "user" : "ユーザー",
+       "login" : "ログイン",
+       "profile" : "プロファイル",
+       "myProfile" : "マイプロファイル",
+       "userProfile" : "ユーザープロファイル",
+       "username" : "ユーザー名",
+       "emailAddress" : "電子メールアドレス",
+       "givenName" : "名",
+       "familyName" : "姓",
+       "changePassword" : "パスワード変更",
+       "accountStatus" : "アカウントステータス",
+       "active" : "アクティブ",
+       "inactive" : "非アクティブ",
+       "address" : "アドレス",
+       "address1" : "アドレス 1",
+       "address2" : "アドレス 2",
+       "country" : "国",
+       "city" : "市",
+       "role" : "管理者権限",
+       "stateProvince" : "州/郡",
+       "phoneNumber" : "携帯電話",
+       "postalCode" : "郵便番号",
+       "lastPasswordSet" : "最終パスワード更新",
+       "siteImage" : "サイトイメージ",
+       "sitePhrase" : "サイトフレーズ",
+       "securityQuestion" : "秘密の質問",
+       "securityAnswer" : "秘密の質問の回答",
+       "adaptiveAuthMethod" : "アダプティブ認証メソッド",
+       "SMS" : "SMS",
+       "OAuth" : "OAuth",
+       "createNewAccount" : "新規アカウント作成",
+       "password" : "パスワード",
+       "confirmPassword" : "パスワード(確認)",
+       "newPassword" : "新規パスワード",
+       "oldPassword" : "旧パスワード",
+       "confirmNewPassword" : "新規パスワード(確認)",
+       "usersList" : "ユーザー一覧",
+       "addUsers" : "ユーザー追加",
+       "name" : "名前",
+       "status" : "ステータス",
+       "email" : "電子メール",
+       "system" : "システム",
+       "changePhoto" : "写真を変更",
+       "SKYPE" : "SKYPE",
+       "googlePlus" : "Google+"
+    }
+  },
+
+  "policy": {
+    "common": {
+      "name": "名前",
+      "description": "説明",
+      "descriptionOptional": "説明 (省略可能)",
+      "openamConsole": "OpenAM コンソール",
+      "edit": "編集",
+      "clear": "クリア",
+      "key": "キー",
+      "value": "値",
+      "notApplicable": "n/a",
+      "select": "選択...",
+      "empty": "空",
+
+      "realm": "レルム",
+      "application": "アプリケーション",
+      "applicationBase": "アプリケーションベース",
+
+      "responseAttributes": "応答属性",
+      "subjectAttributes": "対象属性",
+      "availablePatterns": "利用可能なパターン",
+      "staticAttributes": "静的属性",
+
+      "realms": "レルム",
+      "actions": "アクション",
+      "resources": "リソース",
+      "subjects": "対象",
+      "environments": "環境",
+
+      "noRealms": "レルムがありません...",
+      "noActions": "アクションがありません...",
+      "noResources": "リソースがありません...",
+
+      "noStaticAttributes": "静的属性がありません...",
+      "noSubjectAttributes": "対象属性がありません...",
+
+      "viewAllApplications": "内部のすべてののアプリケーションを表示",
+      "topLeveRealm": "トップレベルレルム",
+
+      "buttons": {
+        "deleteSelected": "選択項目の削除",
+        "finish": "終了",
+        "next": "次へ"
+      },
+      "type": "タイプ",
+      "weekdays": {
+          "Monday": {
+              "short": "月",
+              "full": "月曜日"
+          },
+          "Tuesday": {
+              "short": "火",
+              "full": "火曜日"
+          },
+          "Wednesday": {
+              "short": "水",
+              "full": "水曜日"
+          },
+          "Thursday": {
+              "short": "木",
+              "full": "木曜日"
+          },
+          "Friday": {
+              "short": "金",
+              "full": "金曜日"
+          },
+          "Saturday": {
+              "short": "土",
+              "full": "土曜日"
+          },
+          "Sunday": {
+              "short": "日",
+              "full": "日曜日"
+          }
+      }
+    },
+
+      "documentation": {
+         "tooltip": "続きを読むにはクリックしてください(新しいタブで開きます)。"
+      },
+
+    "manageApplications": {
+      "add": "新規アプリケーションを追加",
+      "importPolicies": "ポリシーのインポート",
+      "exportPolicies": "ポリシーのエクスポート",
+      "title": "アプリケーション",
+      "description": "アプリケーションはポリシーのテンプレートとして機能します(より簡単な管理のためのグループポリシーとともに)。<br>アプリケーションを作成するには、新規アプリケーションの追加]クリックします。アプリケーションを編集するには、アプリケーションの編集アイコンをクリックします。アプリケーション内のポリシーを表示するには、アプリケーション名をクリックします。アプリケーションを削除するには、対象のアプリケーションを選択し、選択項目の削除をクリックします。"
+    },
+
+    "editApplications": {
+      "editApplication": "アプリケーションの編集",
+      "title": "アプリケーションの作成",
+      "description": "アプリケーションを設定するには、ステップ1から始めて、ステップ3へと進みます。アプリケーションが作成された後で変更が可能になります。",
+      "step1": "Step 1: アプリケーション名の設定",
+      "step2": "Step 2: リソースパターンの定義",
+      "step3": "Step 3: 設定の確認と完了",
+      "viewPolicies": "ポリシーを表示"
+    },
+
+    "managePolicies": {
+      "policies": "ポリシー",
+      "add": "新規ポリシーの追加",
+      "description": "ポリシーは、リソースへのアクセスを許可するかどうかを決定するために使用するルールを定義します。<br>ポリシーを作成するには、新規ポリシーの追加をクリックします。ポリシーを編集するには、ポリシー名をクリックします。ポリシーを削除するには、対象のポリシーを選択し、選択項目の削除をクリックします。"
+    },
+
+    "editPolicies": {
+      "editPolicy": "ポリシーの編集",
+      "title": "ポリシーの作成",
+      "description": "ポリシーを設定するには、ステップ1から始めて、ステップ7へと進みます。ポリシーが作成された後で変更が可能になります。",
+      "step1": "Step 1: ポリシー名の設定",
+      "step2": "Step 2: リソースの指定",
+      "step3": "Step 3: アクションの選択",
+      "step4": "Step 4: 対象条件の定義",
+      "step5": "Step 5: 環境条件を定義",
+      "step6": "Step 6: 応答属性の指定",
+      "step7": "Step 7: 設定の確認と完了",
+      "deleteLogical": "削除することですべての子オブジェクトも削除されます。",
+      "manageRulesDescription": "ルールを定義するには、上記の条件または論理ボタンをクリックして、関連するオプションを入力し、ブロックを上のルールセットにドラッグします。各ブロックは、前後に移動して設定することができます。ルールセットセクション内のルールだけが作成したポリシーに含まれます。条件を編集するには、鉛筆のアイコンをクリックするかアイテムをダブルクリックします。",
+      "logical": "論理"
+    },
+
+    "manageReferrals": {
+      "referrals": "参照",
+      "add": "新規参照の追加",
+      "description": "参照は、異なるレルムに存在するアプリケーションとポリシーを有効にし、必要に応じてそれらのレルムにリクエストをリダイレクトします。<br>参照を作成するには、新しい参照の追加をクリックします。参照を編集するには、参照名をクリックします。参照を削除するには、対象の参照を選択し、選択項目の削除をクリックします。",
+      "andReferrals": "&amp; 参照"
+    },
+
+    "editReferrals": {
+      "editReferral": "参照の編集",
+      "title": "参照の作成",
+      "description": "参照を設定するには、ステップ1から始めて、ステップ4へと進みます。参照が作成された後で変更が可能になります。",
+      "step1": "Step 1: 参照名の設定",
+      "step2": "Step 2: リソースの指定",
+      "step3": "Step 3: レルムの選択",
+      "step4": "Step 4: 設定の確認と完了",
+      "selectRealmsDescription": "参照は兄弟または子レルムにだけリダイレクトすることができます。利用可能なレルムフィールドでレルムを選択し、追加ボタンをクリックします。レルムを削除するには、削除ボタンをクリックします。",
+      "selectRealmsPlaceholder": "利用可能なレルム..."
+    },
+
+
+    "actions": {
+      "allow": "許可",
+      "deny": "拒否",
+      "allowed": "許可",
+      "denied": "拒否"
+    },
+
+    "responseAttributes": {
+      "subjectAttributesDescription": "ドロップダウンリストを使用するか、対象属性を検索するために入力を開始してください。",
+      "subjectAttributesPlaceholder": "対象属性の選択または検索"
+    },
+
+    "summaryReview": {
+
+      "noName": "名前がありません...",
+      "noSubjectConditions": "対象条件がありません...",
+      "noSubjectAttributes": "対象属性がありません...",
+      "noEnvironmentConditions": "環境条件がありません...",
+      "applicationDescription": "アプリケーションの設定を確認し、保存するために完了をクリックします。",
+      "policyDescription": "ポリシーの設定を確認し、保存するために完了をクリックします。",
+      "referralDescription": "参照の設定を確認し、保存するために完了をクリックします。",
+      "advancedFalse": "<a href='#' id='toggleAdvanced'>最大化</a>ビューに切り替えます。",
+      "advancedTrue": "<a href='#' id='toggleAdvanced'>最小化</a>ビューに切り替えます。"
+    },
+
+    "addResources": {
+      "patternDescription": "以下のリストからパターンを選択してください。",
+      "resourceDescription": "リソースの作成"
+    },
+
+      "operators": {
+          "NOT": "NOT",
+          "OR": "OR",
+          "AND": "AND"
+      },
+
+      "subjectTypes": {
+          "AuthenticatedUsers": {
+              "title": "認証済みユーザー",
+              "props": {}
+          },
+          "Identity": {
+              "title": "ユーザーおよびグループ",
+              "props": {
+                  "subjectValues": "対象の値",
+                  "users": "ユーザー対象",
+                  "groups": "グループ対象"
+              },
+              "placeholder" : "対象の検索"
+          },
+          "JwtClaim": {
+              "title": "OpenID Connect/JWT クレーム",
+              "props": {
+                  "claimName": "クレーム名",
+                  "claimValue": "クレーム値"
+              }
+          },
+          "NONE": {
+              "title": "不一致",
+              "props": {}
+          }
+      },
+
+      "conditionTypes": {
+          "AMIdentityMembership": {
+              "title": "アイデンティティメンバーシップ",
+              "props": {
+                  "amIdentityName": "AM アイデンティティ名"
+              }
+          },
+          "AuthLevel": {
+              "title": "認証レベル  (以上)",
+              "props": {
+                  "authLevel": "認証レベル "
+              }
+          },
+          "AuthScheme": {
+              "title": "モジュールインスタンスによる認証",
+              "props": {
+                  "authScheme": "認証スキーム",
+                  "applicationIdleTimeout": "アプリケーションアイドルタイムアウトスキーム",
+                  "applicationName": "アプリケーション名"
+              }
+          },
+          "AuthenticateToRealm": {
+              "title": "レルムへの認証",
+              "props": {
+                  "authenticateToRealm": "レルムへの認証"
+              }
+          },
+          "AuthenticateToService": {
+              "title": "モジュール連鎖による認証",
+              "props": {
+                  "authenticateToService": "サービスへの認証"
+              }
+          },
+          "IPv4": {
+              "title": "IPv4 アドレス/DNS 名",
+              "props": {
+                  "ipRange": "IP レンジ",
+                  "dnsName": "DNS 名",
+                  "startIp": "開始 IP",
+                  "endIp": "終了 IP"
+              }
+          },
+          "IPv6": {
+              "title": "IPv6 Address/DNS Name",
+              "props": {
+                  "ipRange": "IP レンジ",
+                  "dnsName": "DNS 名",
+                  "startIp": "開始 IP",
+                  "endIp": "終了 IP"
+              }
+          },
+          "LDAPFilter": {
+              "title": "LDAP フィルター条件",
+              "props": {
+                  "ldapFilter": "LDAP フィルター"
+              }
+          },
+          "LEAuthLevel": {
+              "title": "認証レベル (以下)",
+              "props": {
+                  "authLevel": "認証レベル"
+              }
+          },
+          "OAuth2Scope": {
+              "title": "OAuth2 スコープ",
+              "props": {
+                  "requiredScopes": "スコープ"
+              }
+          },
+          "ResourceEnvIP": {
+              "title": "リソース/環境/IP アドレス",
+              "props": {
+                  "resourceEnvIPConditionValue": "リソース/環境/IP アドレス"
+              }
+          },
+          "Session": {
+              "title": "アクティブセッション時間",
+              "props": {
+                  "maxSessionTime": "最大セッション時間",
+                  "terminateSession": "セッションの終了"
+              }
+          },
+          "SessionProperty": {
+              "title": "現在のセッションプロパティ",
+              "props": {
+                  "ignoreValueCase": "大文字小文字を区別しない",
+                  "properties": "プロパティ"
+              }
+          },
+          "SimpleTime": {
+              "title": "時間 (曜日、日付、時刻、タイムゾーン)",
+              "props": {
+                  "startTime": "開始時刻",
+                  "endTime": "終了時刻",
+                  "startDay": "開始日",
+                  "endDay": "終了日",
+                  "startDate": "開始日",
+                  "endDate": "終了日",
+                  "enforcementTimeZone": "タイムゾーン",
+                  "enterTimeZone": "タイムゾーンを入力してください。"
+              },
+              "helper": "時間(開始と終了)、曜日(開始と終了)、日付(開始と終了)、および/またはタイムゾーン: 時間条件は、以下の値の1つ以上が含まれている必要があります。"
+          },
+
+          "legacyFormat": "この状態は従来の形式であり、置換する必要があります。",
+          "nothingSelected": "未選択"
+      }
+  }
+}

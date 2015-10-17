@@ -28,7 +28,8 @@
 -->
 
 <!--
-    Portions Copyrighted 2013 ForgeRock AS
+    Portions Copyrighted 2013-2015 ForgeRock AS.
+    Portions Copyrighted 2015 Nomura Research Institute, Ltd.
 -->
 
 
@@ -37,8 +38,7 @@
           "jar://com/sun/identity/authentication/Auth_Module_Properties.dtd">
 
 <ModuleProperties moduleName="JDBC" version="1.0" > 
-    <Callbacks length="2" order="1" timeout="120" 
-        header="このサーバーは JDBC 認証を使用します" >
+    <Callbacks length="2" order="2" timeout="120" header="OpenAM へのサインイン" >
         <NameCallback> 
             <Prompt>ユーザー名</Prompt> 
         </NameCallback>
