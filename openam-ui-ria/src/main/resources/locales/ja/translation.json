@@ -1,77 +1,77 @@
 {
     "config" : {
         "dates" : {
-            "monthNames" : "1朁E 2朁E 3朁E 4朁E 5朁E 6朁E 7朁E 8朁E 9朁E 10朁E 11朁E 12朁E,
-            "monthNamesShort" : "1朁E 2朁E 3朁E 4朁E 5朁E 6朁E 7朁E 8朁E 9朁E 10朁E 11朁E 12朁E,
+            "monthNames" : "1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月",
+            "monthNamesShort" : "1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月",
             "dayNames" : "日曜日, 月曜日, 火曜日, 水曜日, 木曜日, 金曜日, 土曜日",
-            "dayNamesShort" : "日, 朁E 火, 水, 木, 釁E 圁E
+            "dayNamesShort" : "日, 月, 火, 水, 木, 金, 土"
         },
         "messages" : {
             "CommonMessages" : {
-                "authenticationFailed" : "ユーザー吁Eパスワード�E絁E��合わせが不正です、E,
-                "loginFailureLockout" : "こ�EユーザーはアクチE��ブではありません。シスチE��管琁E��E��問い合わせてください、E,
-                "maxSessionsLimitOrSessionQuota": "最大セチE��ョン数の限度に達したか、セチE��ョン制限いっぱぁE��なりました、E,
-                "invalidRealm" : "レルムが存在しません、E,
-                "serviceUnavailable" : "サービスが利用できません、E,
-                "unknown" : "不�Eなエラー。シスチE��管琁E��E��問い合わせてください、E,
-                "loggedIn" : "正常にログインしました、E,
-                "errorFetchingData" : "ユーザーチE�EタフェチE��中のエラー、E,
-                "loggedOut" : "ログアウトしました、E,
-                "loginTimeout" : "ログインセチE��ョンがタイムアウトになりました。�E起動してぁE��ぁE..",
-                "unauthorized" : "不正なアクセスまた�EセチE��ョンタイムアウトです、E,
-                "internalError" : "冁E��サーバ�Eエラー",
-                "forbiddenError": "閲覧禁止エラー、E,
-                "notFoundError": "未検�Eエラー、E,
-                "badRequestError" : "不正リクエストエラー、E,
-                "conflictError" : "リクエストに競合を検�Eしました、E,
-                "incorrectRevisionError" : "バ�Eジョンが最新ではなぁE��め、レコードを更新できません、E,
-                "tokenNotFound" : "ト�Eクンが見つかりません、E,
-                "securityDataChanged" : "パスワードが変更されました、E
+                "authenticationFailed" : "ユーザー名/パスワードの組み合わせが不正です。",
+                "loginFailureLockout" : "このユーザーはアクティブではありません。システム管理者に問い合わせてください。",
+                "maxSessionsLimitOrSessionQuota": "最大セッション数の限度に達したか、セッション制限いっぱいになりました。",
+                "invalidRealm" : "レルムが存在しません。",
+                "serviceUnavailable" : "サービスが利用できません。",
+                "unknown" : "不明なエラー。システム管理者に問い合わせてください。",
+                "loggedIn" : "正常にログインしました。",
+                "errorFetchingData" : "ユーザーデータフェッチ中のエラー。",
+                "loggedOut" : "ログアウトしました。",
+                "loginTimeout" : "ログインセッションがタイムアウトになりました。再起動しています...",
+                "unauthorized" : "不正なアクセスまたはセッションタイムアウトです。",
+                "internalError" : "内部サーバーエラー",
+                "forbiddenError": "閲覧禁止エラー。",
+                "notFoundError": "未検出エラー。",
+                "badRequestError" : "不正リクエストエラー。",
+                "conflictError" : "リクエストに競合を検出しました。",
+                "incorrectRevisionError" : "バージョンが最新ではないため、レコードを更新できません。",
+                "tokenNotFound" : "トークンが見つかりません。",
+                "securityDataChanged" : "パスワードが変更されました。"
             },
             "UserMessages" : {
-                "invalidOldPassword" : "旧パスワードが無効です、E,
-                "usernameNotFound" : "ユーザー名が見つかりません、E,
-                "noEmailProvided" : "プロファイルに電子メールが設定されてぁE��せん、E,
+                "invalidOldPassword" : "旧パスワードが無効です。",
+                "usernameNotFound" : "ユーザー名が見つかりません。",
+                "noEmailProvided" : "プロファイルに電子メールが設定されていません。",
                 "emailNotSent" : "電子メールが送信されませんでした",
-                "unableToRegister" : "登録できませんでした。シスチE��管琁E��E��問い合わせてください、E,
-                "changedPassword" : "パスワードが変更されました、E,
-                "profileUpdateFailed" : "プロファイル更新中に問題が発生しました、E,
-                "profileUpdateSuccessful" : "プロファイルが更新されました、E,
-                "userNameUpdated" : "ユーザー名�E正常に更新されました、E,
-                "afterRegistration" : "アカウントが正常に登録されました、E,
-                "siteIdentificationChanged" : "サイト�E識別画像が変更されました、E,
-                "userAlreadyExists" : "ユーザーが既に存在します、E,
-                "errorDeletingNotification" : "通知の削除エラー、E,
-                "errorFetchingNotifications" : "通知の検索エラー、E,
-                "identityNoSpace" : "アイチE��チE��チE��名�E先頭また�E末尾に<br>空白を含めることはできません、E,
-                "selfRegistrationDisabled"  : "自己登録は無効になってぁE��す、E
+                "unableToRegister" : "登録できませんでした。システム管理者に問い合わせてください。",
+                "changedPassword" : "パスワードが変更されました。",
+                "profileUpdateFailed" : "プロファイル更新中に問題が発生しました。",
+                "profileUpdateSuccessful" : "プロファイルが更新されました。",
+                "userNameUpdated" : "ユーザー名は正常に更新されました。",
+                "afterRegistration" : "アカウントが正常に登録されました。",
+                "siteIdentificationChanged" : "サイトの識別画像が変更されました。",
+                "userAlreadyExists" : "ユーザーが既に存在します。",
+                "errorDeletingNotification" : "通知の削除エラー。",
+                "errorFetchingNotifications" : "通知の検索エラー。",
+                "identityNoSpace" : "アイデンティティ名の先頭または末尾に<br>空白を含めることはできません。",
+                "selfRegistrationDisabled"  : "自己登録は無効になっています。"
                 
             },
             "AdminMessages" : {
-                "cannotDeleteYourself" : "自身を削除することはできません、E,
-                "userDeleted" : "ユーザーが削除されました、E,
-                "userDeleteError" : "ユーザを削除する際にエラーが発生しました、E,
-                "userApplicationsUpdate" : "アプリケーションの設定が変更されました、E,
-                "completedTask" : "タスクが完亁E��ました、E,
+                "cannotDeleteYourself" : "自身を削除することはできません。",
+                "userDeleted" : "ユーザーが削除されました。",
+                "userDeleteError" : "ユーザを削除する際にエラーが発生しました。",
+                "userApplicationsUpdate" : "アプリケーションの設定が変更されました。",
+                "completedTask" : "タスクが完了しました。",
                 "claimedTask" : "Task has been claimed.",
                 "unclaimedTask" : "Task has been unclaimed.",
-                "startedProcess" : "プロセスが開始されました、E
+                "startedProcess" : "プロセスが開始されました。"
             }
         },
         "AppConfiguration" : {
             "Navigation" : {
                 "links" : {
-                    "dashboard" : "ダチE��ュボ�EチE,
+                    "dashboard" : "ダッシュボード",
                     "users" : "ユーザー",
                     "apps" : "アプリケーション",
                     "allApps" : "全てのアプリケーション",
                     "addMore" : "アプリケーションの追加",
-                    "groups" : "グルーチE,
+                    "groups" : "グループ",
                     "tasksMenu" : "タスク",
-                    "allTasks" : "グループ�Eキューにあるタスク",
+                    "allTasks" : "グループのキューにあるタスク",
                     "myTasks" : "マイタスク",
-                    "startProcess" : "処琁E��開姁E,
-                    "oauthtokens" : "OAuth 2 ト�Eクンマネージャー"
+                    "startProcess" : "処理を開始",
+                    "oauthtokens" : "OAuth 2 トークンマネージャー"
                 }
             }
         }
@@ -79,226 +79,226 @@
     "templates" : {
         "user" : {
             "LoginDialog" : {
-                "refreshOnLogin" : "ログイン時にリフレチE��ュする忁E��がありまぁE 
+                "refreshOnLogin" : "ログイン時にリフレッシュする必要があります" 
             },
             "LoginTemplate" : {
-                "loginRemember" : "ユーザー名を記�Eする、E,
-                "noAccountQuestion" : "アカウントを持ってぁE��ぁE��すか?",
-                "registerAccount" : "アカウントを登録して下さぁE��E,
+                "loginRemember" : "ユーザー名を記憶する。",
+                "noAccountQuestion" : "アカウントを持っていないですか?",
+                "registerAccount" : "アカウントを登録して下さい。",
                 "problemLoggingQuestion" : "ログインのトラブルがありますか?",
-                "resetPassword" : "パスワード�EリセチE��",
-                "siteIdentificationHeader": "サイト�E識別",
-                "siteIdentificationExplanation": "ログイン名を入力してください、Ebr />サイト�E画像とパスフレーズがここに表示されます、E
+                "resetPassword" : "パスワードのリセット",
+                "siteIdentificationHeader": "サイトの識別",
+                "siteIdentificationExplanation": "ログイン名を入力してください。<br />サイトの画像とパスフレーズがここに表示されます。"
             },
             "404" : {
-                "pageNotFound" : "ペ�Eジが見つかりません、E,
-                "requestedPageCouldNotBeFound" : "要求されたペ�Eジが見つかりませんでした、E
+                "pageNotFound" : "ページが見つかりません。",
+                "requestedPageCouldNotBeFound" : "要求されたページが見つかりませんでした。"
             },
             "DefaultBaseTemplate" : {
-                "orPhone" : "、また�E電話"
+                "orPhone" : "、または電話"
             },
             "ChangeSecurityDataDialogTemplate" : {
-                "securityDataChange" : "セキュリチE��チE�Eタの変更",
-                "enterNewPasswordToChange" : "パスワードを変更するには、以下�Eフィールドに新しいパスワードを入力してください、E,
-                "selectQuestionAndAnserIfYouWant" : "設定する場合�E、質問を選択しそ�E答えを�E力してください、E,
-                "securityQuestionAndAnserExplanation" : "選択したセキュリチE��の質問と設定したそれに対する答えは、パスワードを忘れた場合にあなたを特定するために使用されます、E
+                "securityDataChange" : "セキュリティデータの変更",
+                "enterNewPasswordToChange" : "パスワードを変更するには、以下のフィールドに新しいパスワードを入力してください。",
+                "selectQuestionAndAnserIfYouWant" : "設定する場合は、質問を選択しその答えを入力してください。",
+                "securityQuestionAndAnserExplanation" : "選択したセキュリティの質問と設定したそれに対する答えは、パスワードを忘れた場合にあなたを特定するために使用されます。"
             },
             "ConfirmPasswordDialogTemplate" : {
-                "title" : "現在のパスワーチE,
-                "explanation1" : "次の属性を変更すると、�E認証が忁E��になりまぁE ",
-                "explanation2" : "継続するために現在のパスワードを確認してください、E
+                "title" : "現在のパスワード",
+                "explanation1" : "次の属性を変更すると、再認証が必要になりす: ",
+                "explanation2" : "継続するために現在のパスワードを確認してください。"
             },
             "ChangeSiteIdentificationDialogTemplate" : {
-                "siteImageAndPhaseExplanation" : "選択したサイト�Eイメージとフレーズは、正当なサイトにログインすることを確認するためにログイン時に表示されまぁE
+                "siteImageAndPhaseExplanation" : "選択したサイトのイメージとフレーズは、正当なサイトにログインすることを確認するためにログイン時に表示されます。"
             },
             "EnterOldPasswordDialog" : {
-                "passwordAndSecurityQuestionChange" : "パスワードとセキュリチE��の質問�E変更",
-                "enterYourOldPassword" : "古ぁE��スワードを入力してください、E
+                "passwordAndSecurityQuestionChange" : "パスワードとセキュリティの質問の変更",
+                "enterYourOldPassword" : "古いパスワードを入力してください。"
             },
             "ForgottenPasswordTemplate" : {
-                "forgottenPasswordQuestion" : "パスワードを忘れましたぁE",
-                "enterLogin" : "ユーザー名を入力してください。パスワード�EリセチE��手頁E��記載されたメールを送信します、E,
-                "changeForgottenPassword" : "忘れたパスワード�E変更",
-                "emailSubject" : "OpenAM: パスワードリセチE��を要求しました、E,
-                "emailMessage" : "OpenAM からこんにちは、En\n\n\nForgeRock アカウント�EパスワードをリセチE��するように要求しました、En\n**注愁E こ�EリンクをクリチE��した際にエラーメチE��ージが表示された場合�E、URL をコピ�Eしてブラウザに貼り付けてください、En\n",
-                "emailSent" : "電子メールを送信しました。パスワード�EリセチE��処琁E��完亁E��るには、E��子メール冁E�Eリンクに従ってください、E,
-                "proceedToLogin" : "ログインに進みまぁE
+                "forgottenPasswordQuestion" : "パスワードを忘れましたか?",
+                "enterLogin" : "ユーザー名を入力してください。パスワードのリセット手順が記載されたメールを送信します。",
+                "changeForgottenPassword" : "パスワードの変更",
+                "emailSubject" : "OpenAM: パスワードリセットを要求しました。",
+                "emailMessage" : "OpenAM からこんにちは。\n\n\n\nForgeRock アカウントのパスワードをリセットするように要求しました。\n\n**注意: このリンクをクリックした際にエラーメッセージが表示された場合は、URL をコピーしてブラウザに貼り付けてください。\n\n",
+                "emailSent" : "電子メールを送信しました。パスワードのリセット処理を完了するには、電子メール内のリンクに従ってください。",
+                "proceedToLogin" : "ログインに進みます"
             },
             "TermsOfUseTemplate" : {
-                "termsOfUse" : "利用規紁E,
+                "termsOfUse" : "利用規約",
                 "termsOfUseContent" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris idvulputate urna. Quisque tristique dictum sodales. Nullam tempus eleifend erat,vel facilisis nibh euismod non. Phasellus vitae elit velit, in sollicitudindiam. Maecenas ornare nunc non ipsum ornare vehicula id sed dolor. Duispellentesque congue sapien, dictum adipiscing est posuere sit amet. Suspendissein lectus lorem. Suspendisse vitae metus sapien, sit amet luctus libero.Integer nec nunc sed massa pellentesque pulvinar. Integer vulputate nunc atnunc lacinia eu luctus neque elementum. Aenean ultricies arcu sed enimultricies blandit placerat ut massa. Donec at dolor sit amet magna vulputateelementum sit amet in sapien. Donec sit amet erat neque.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris idvulputate urna. Quisque tristique dictum sodales. Nullam tempus eleifend erat,vel facilisis nibh euismod non. Phasellus vitae elit velit, in sollicitudindiam. Maecenas ornare nunc non ipsum ornare vehicula id sed dolor. Duispellentesque congue sapien, dictum adipiscing est posuere sit amet. Suspendissein lectus lorem. Suspendisse vitae metus sapien, sit amet luctus libero.Integer nec nunc sed massa pellentesque pulvinar. Integer vulputate nunc atnunc lacinia eu luctus neque elementum. Aenean ultricies arcu sed enimultricies blandit placerat ut massa. Donec at dolor sit amet magna vulputateelementum sit amet in sapien. Donec sit amet erat neque.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris idvulputate urna. Quisque tristique dictum sodales. Nullam tempus eleifend erat,vel facilisis nibh euismod non. Phasellus vitae elit velit, in sollicitudindiam. Maecenas ornare nunc non ipsum ornare vehicula id sed dolor. Duispellentesque congue sapien, dictum adipiscing est posuere sit amet. Suspendissein lectus lorem. Suspendisse vitae metus sapien, sit amet luctus libero.Integer nec nunc sed massa pellentesque pulvinar. Integer vulputate nunc atnunc lacinia eu luctus neque elementum. Aenean ultricies arcu sed enimultricies blandit placerat ut massa. Donec at dolor sit amet magna vulputateelementum sit amet in sapien. Donec sit amet erat neque.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris idvulputate urna. Quisque tristique dictum sodales. Nullam tempus eleifend erat,vel facilisis nibh euismod non. Phasellus vitae elit velit, in sollicitudindiam. Maecenas ornare nunc non ipsum ornare vehicula id sed dolor. Duispellentesque congue sapien, dictum adipiscing est posuere sit amet. Suspendissein lectus lorem. Suspendisse vitae metus sapien, sit amet luctus libero.Integer nec nunc sed massa pellentesque pulvinar. Integer vulputate nunc atnunc lacinia eu luctus neque elementum. Aenean ultricies arcu sed enimultricies blandit placerat ut massa. Donec at dolor sit amet magna vulputateelementum sit amet in sapien. Donec sit amet erat neque.</p>"
             },
             "UserProfileTemplate" : {
                 "changeEmailAddress" : "電子メールアドレスの変更",
-                "changeSecurityData" : "パスワード�E変更",
-                "changeSiteIdentification" : "サイチEID の変更"
+                "changeSecurityData" : "パスワードの変更",
+                "changeSiteIdentification" : "サイト ID の変更"
             },
             "UserRegistrationTemplate" : {
-                "registerYourAccount" : "アカウント�E登録",
+                "registerYourAccount" : "アカウントの登録",
                 "logIn" : "Log in",
-                "haveAccoutQuestion" : "既にアカウントを持ってぁE��すか�E�E,
-                "agreeToTerms" : "%s利用規紁Esに同意します、E,
+                "haveAccoutQuestion" : "既にアカウントを持っていますか？",
+                "agreeToTerms" : "%s利用規約%sに同意します。",
                 "emailSubject" : "OpenAM への登録",
-                "emailMessage" : "登録プロセスを続行するには、以下�Eリンクを参照ください:",
-                "emailSent" : "電子メールを送信しました。登録プロセスを完亁E��るには、E��子メール冁E�Eリンクに従ってください、E,
-                "registrationComplete" : "登録完亁E
+                "emailMessage" : "登録プロセスを続行するには、以下のリンクを参照ください:",
+                "emailSent" : "電子メールを送信しました。登録プロセスを完了するには、電子メール内のリンクに従ってください。",
+                "registrationComplete" : "登録完了"
             },
             "RestLogoutTemplate" : {
-                "loggedOut" : "ログアウトしました、E,
-                "returnToLogin" : "ログインペ�Eジに戻る、E
+                "loggedOut" : "ログアウトしました。",
+                "returnToLogin" : "ログインページに戻る。"
             }
         },
         "admin" : {
             "tasks" : {
                 "ShowUserProfile" : {
-                    "requestInitiator" : "で開始された要汁E
+                    "requestInitiator" : "で開始された要求"
                 },
                 "TasksDashboardTemplate" : {
-                    "tasksFromGroupsQueue" : "マイグループ�Eキューにあるタスク、E
+                    "tasksFromGroupsQueue" : "マイグループのキューにあるタスク。"
                 },
                 "ProcessUserTaskTableTemplate" : {
-                    "requestCount" : "__count__  要汁E,
-                    "requestCount_plural" : "__count__  要汁E
+                    "requestCount" : "__count__  要求",
+                    "requestCount_plural" : "__count__  要求"
                 }
             },
             "ChangeUserPasswordDialogTemplate" : {
-                "securityDataChange" : "セキュリチE��チE�Eタの変更",
-                "enterNewPasswordToChange" : "ユーザーのパスワードを変更するには、以下�Eフィールドに新しいパスワードを入力してください、E
+                "securityDataChange" : "セキュリティデータの変更",
+                "enterNewPasswordToChange" : "パスワードを変更するには、以下のフィールドに新しいパスワードを入力してください。"
             },
             "UsersTemplate" : {
                 "remainingUsers" : "残りのユーザー"
             }
         },
         "oauth": {
-            "clientID" : "クライアンチEID",
+            "clientID" : "クライアント ID",
             "tokenList" : "認可済みのアプリケーション",
-            "remainingTokens" : "残りのト�Eクン",
-            "tokenID" : "ト�Eクン ID",
+            "remainingTokens" : "残りのトークン",
+            "tokenID" : "トークン ID",
             "expireDate" : "有効期限",
-            "scope" : "スコーチE,
-            "tokenType" : "ト�EクンタイチE,
+            "scope" : "スコープ",
+            "tokenType" : "トークンタイプ",
             "parent" : "親",
-            "username" : "ユーザー吁E,
-            "redirecturi" : "リダイレクチEURI",
-            "refreshToken" : "リフレチE��ュト�Eクン",
+            "username" : "ユーザー名",
+            "redirecturi" : "リダイレクト URI",
+            "refreshToken" : "リフレッシュトークン",
             "issued" : "発行済み",
             "realm" : "レルム",
-            "tokenInfo": "ト�Eクン惁E��"
+            "tokenInfo": "トークン情報"
         }
     },
     "common" : {
          "form" : {
-            "yes" : "はぁE,
-            "no" : "ぁE��ぁE,
-            "true" : "省E,
+            "yes" : "はい",
+            "no" : "いいえ",
+            "true" : "真",
             "false" : "偽",
             "update" : "更新",
-            "save" : "保孁E,
-            "create" : "作�E",
+            "save" : "保存",
+            "create" : "作成",
             "cancel" : "キャンセル",
-            "reset" : "リセチE��",
-            "close" : "閉じめE,
-            "logout" : "ログアウチE,
+            "reset" : "リセット",
+            "close" : "閉じる",
+            "logout" : "ログアウト",
             "register" : "登録",
-            "home" : "ホ�Eム",
-            "start" : "開姁E,
-            "continue" : "継綁E,
-            "back" : "戻めE,
+            "home" : "ホーム",
+            "start" : "開始",
+            "continue" : "継続",
+            "back" : "戻る",
             "delete" : "削除",
             "details" : "詳細",
             "pleaseSelect" : "選択してください",
             "addUser" : "ユーザーの追加",
-            "decision" : "決宁E,
+            "decision" : "決定",
             "accept" : "許可",
-            "reject" : "却丁E,
-            "createdAt" : "に作�Eされました",
+            "reject" : "却下",
+            "createdAt" : "に作成されました",
             "search" : "検索",
-            "submit" : "サブミチE��",
+            "submit" : "サブミット",
             "actions" : "アクション",
-            "complete" : "完亁E,
+            "complete" : "完了",
             "copyright" : "Copyright &copy; 2010-14 ForgeRock AS, all rights reserved.",
-            "sessionExpired" : "セチE��ョンが期限�Eれです、E,
-            "enableCookies" : "ログインするためには、クチE��ーを有効にする忁E��があります、E,
-            "deleteSelected" : "選択頁E��の削除",
+            "sessionExpired" : "セッションが期限切れです。",
+            "enableCookies" : "ログインするためには、クッキーを有効にする必要があります。",
+            "deleteSelected" : "選択項目の削除",
             "validation" : {
-                "VALID_PHONE_FORMAT": "無効な斁E��が含まれてぁE��す、E,
-                "VALID_NAME_FORMAT": "無効な斁E��が含まれてぁE��す、E,
-                "VALID_EMAIL_ADDRESS_FORMAT": "電子メールアドレスが無効です、E,
-                "AT_LEAST_X_CAPITAL_LETTERS" : "最佁E__numCaps__ capital 斁E��以上�E忁E��です、E,
-                "AT_LEAST_X_NUMBERS" : "少なくとめE__numNums__ 個以上�E忁E��です、E,
+                "VALID_PHONE_FORMAT": "無効な文字が含まれています。",
+                "VALID_NAME_FORMAT": "無効な文字が含まれています。",
+                "VALID_EMAIL_ADDRESS_FORMAT": "電子メールアドレスが無効です。",
+                "AT_LEAST_X_CAPITAL_LETTERS" : "最低 __numCaps__ capital 文字以上は必要です。",
+                "AT_LEAST_X_NUMBERS" : "少なくとも __numNums__ 個以上は必要です。",
                 "CANNOT_CONTAIN_OTHERS" : "値を含めることはできません: __disallowedFields__",
-                "MIN_LENGTH" : "最佁E__minLength__ 斁E��です、E,
-                "REQUIRED" : "空白にすることはできません、E,
-                "UNIQUE" : "既に存在します、E,
+                "MIN_LENGTH" : "最低 __minLength__ 文字です。",
+                "REQUIRED" : "空白にすることはできません。",
+                "UNIQUE" : "既に存在します。",
                 "REAUTH_REQUIRED" : "",
-                "formContainsErrors" : "フォームには検証エラーが含まれてぁE��す、E,
-                "atLeastOneCapitalLetter" : "少なくとも大斁E��が 1 斁E��以上忁E��です、E,
-                "atLeastOneNumber" : "少なくとも数字が 1 つ以上忁E��です、E,
-                "atLeast8Characters" : "少なくとめE8 斁E��以上忁E��です、E,
-                "cannotMatchLogin" : "ログインが一致しません、E,
-                "confirmationMatchesPassword" : "確認がパスワードと一致します、E,
-                "usernameExists" : "ユーザー名�E既に存在します、E,
-                "emailAddressAlreadyExists" : "電子メールアドレスは既に存在します、E,
-                "onlyAlphabeticCharacters" : "英字�Eみです、E,
-                "onlyNumbersAndSpecialCharacters" : "数字と特殊文字�Eみです、E,
-                "cannotMatchOldPassword" : "古ぁE��スワードと一致しません、E,
-                "minimum4Characters" : "最封E4 斁E��です、E,
-                "acceptanceRequiredForRegistration" : "登録には受理が忁E��です、E,
-                "incorrectPassword" : "パスワードが正しくありません、E,
-                "incorrectSecurityAnswer" : "応答が無効です、E,
-                "required" : "忁E��です、E,
-                "emailNotValid" : "メールアドレスが無効です、E,
-                "emailExists" : "電子メールアドレスは既に存在します、E,
-                "shouldBeLong" : "log 値である忁E��があります、E,
-                "wrongDateFormat" : "フォーマットが不正です、E
+                "formContainsErrors" : "フォームには検証エラーが含まれています。",
+                "atLeastOneCapitalLetter" : "少なくとも大文字が 1 文字以上必要です。",
+                "atLeastOneNumber" : "少なくとも数字が 1 つ以上必要です。",
+                "atLeast8Characters" : "少なくとも 8 文字以上必要です。",
+                "cannotMatchLogin" : "ログインが一致しません。",
+                "confirmationMatchesPassword" : "新規パスワードとパスワード(確認)が一致。",
+                "usernameExists" : "ユーザー名は既に存在します。",
+                "emailAddressAlreadyExists" : "電子メールアドレスは既に存在します。",
+                "onlyAlphabeticCharacters" : "英字のみです。",
+                "onlyNumbersAndSpecialCharacters" : "数字と特殊文字のみです。",
+                "cannotMatchOldPassword" : "古いパスワードと一致しません。",
+                "minimum4Characters" : "最小 4 文字です。",
+                "acceptanceRequiredForRegistration" : "登録には受理が必要です。",
+                "incorrectPassword" : "パスワードが正しくありません。",
+                "incorrectSecurityAnswer" : "応答が無効です。",
+                "required" : "必須です。",
+                "emailNotValid" : "メールアドレスが無効です。",
+                "emailExists" : "電子メールアドレスは既に存在します。",
+                "shouldBeLong" : "log 値である必要があります。",
+                "wrongDateFormat" : "フォーマットが不正です。"
             }
          },
          "user" : {
             "user" : "ユーザー",
             "login" : "ログイン",
-            "loginConfirm" : "すでにログインしてぁE��す。ログアウトし、別の絁E��にログインしますか?",
+            "loginConfirm" : "すでにログインしています。ログアウトし、別の組織にログインしますか?",
             "profile" : "プロファイル",
             "myProfile" : "マイプロファイル",
             "userProfile" : "ユーザープロファイル",
-            "username" : "ユーザー吁E,
+            "username" : "ユーザー名",
             "emailAddress" : "電子メールアドレス",
-            "givenName" : "吁E,
-            "familyName" : "姁E,
+            "givenName" : "名",
+            "familyName" : "姓",
             "changePassword" : "パスワード変更",
-            "forgotPassword" : "パスワード忘れ",
-            "accountStatus" : "アカウントスチE�Eタス",
-            "active" : "アクチE��チE,
-            "inactive" : "非アクチE��チE,
+            "forgotPassword" : "パスワードを忘れた場合",
+            "accountStatus" : "アカウントステータス",
+            "active" : "アクティブ",
+            "inactive" : "非アクティブ",
             "address" : "アドレス",
             "address1" : "アドレス 1",
             "address2" : "アドレス 2",
             "country" : "国",
-            "city" : "币E,
-            "role" : "管琁E��E��陁E,
-            "stateProvince" : "巁E郡",
+            "city" : "市",
+            "role" : "管理者権限",
+            "stateProvince" : "州/郡",
             "phoneNumber" : "携帯電話",
             "postalCode" : "郵便番号",
             "lastPasswordSet" : "最終パスワード更新",
             "siteImage" : "サイトイメージ",
             "sitePhrase" : "サイトフレーズ",
-            "securityQuestion" : "秘寁E�E質啁E,
-            "securityAnswer" : "秘寁E�E質問�E回筁E,
-            "adaptiveAuthMethod" : "アダプティブ認証メソチE��",
+            "securityQuestion" : "秘密の質問",
+            "securityAnswer" : "秘密の質問の回答",
+            "adaptiveAuthMethod" : "アダプティブ認証メソッド",
             "SMS" : "SMS",
             "OAuth" : "OAuth",
-            "createNewAccount" : "新規アカウント作�E",
-            "password" : "パスワーチE,
-            "confirmPassword" : "パスワーチE確誁E",
-            "newPassword" : "新規パスワーチE,
-            "oldPassword" : "旧パスワーチE,
-            "currentPassword" : "現在のパスワーチE,
-            "confirmNewPassword" : "新規パスワーチE確誁E",
+            "createNewAccount" : "新規アカウント作成",
+            "password" : "パスワード",
+            "confirmPassword" : "パスワード(確認)",
+            "newPassword" : "新規パスワード",
+            "oldPassword" : "旧パスワード",
+            "currentPassword" : "現在のパスワード",
+            "confirmNewPassword" : "新規パスワード(確認)",
             "usersList" : "ユーザー一覧",
             "addUsers" : "ユーザー追加",
             "name" : "名前",
-            "status" : "スチE�Eタス",
+            "status" : "ステータス",
             "email" : "電子メール",
-            "system" : "シスチE��",
+            "system" : "システム",
             "changePhoto" : "写真を変更",
             "SKYPE" : "SKYPE",
             "googlePlus" : "Google+"
@@ -308,36 +308,36 @@
             "assignToMe" : "私にアサイン",
             "claim" : "クレーム",
             "unclaim" : "アンクレーム",
-            "approve" : "承誁E,
+            "approve" : "承認",
             "deny" : "拒否",
             "requeue" : "再キューイング",
-            "taskName" : "タスク吁E,
-            "processName" : "プロセス吁E,
-            "startProcess" : "プロセスの開姁E,
-            "assignee" : "アサイナ�E",
+            "taskName" : "タスク名",
+            "processName" : "プロセス名",
+            "startProcess" : "プロセスの開始",
+            "assignee" : "アサイナー",
             "taskDetails" : "タスクの詳細",
             "myTasks" : "マイタスク",
-            "tasksList" : "タスクリスチE,
+            "tasksList" : "タスクリスト",
             "processes" : "プロセス"
          },
          "application" : {
-            "applicationName" : "アプリケーション吁E,
-            "requestedBy" : "による要汁E,
+            "applicationName" : "アプリケーション名",
+            "requestedBy" : "による要求",
             "yourFrequentlyUsedApplications" : "頻繁に使用するアプリケーション",
             "applicationsYouHaveAdded" : "追加したアプリケーション",
-            "defaultApplications" : "チE��ォルトアプリケーション",
+            "defaultApplications" : "デフォルトアプリケーション",
             "addMoreApplications" : "さらにアプリケーションの追加",
             "allAvailableApps" : "使用可能なすべてのアプリケーション",
-            "dropApplicationsHere" : "ここにアプリケーションをドロチE�E"
+            "dropApplicationsHere" : "ここにアプリケーションをドロップ"
          },
          "notification" : {
             "notifications" : "通知",
-            "deleteThisMessage" : "こ�EメチE��ージを削除",
-            "type" : "通知タイチE,
-            "message" : "メチE��ージ",
+            "deleteThisMessage" : "このメッセージを削除",
+            "type" : "通知タイプ",
+            "message" : "メッセージ",
             "types" : {
-                "info" : "惁E��",
-                "warning" : "警呁E,
+                "info" : "情報",
+                "warning" : "警告",
                 "error" : "エラー"
             }
          }
@@ -345,30 +345,30 @@
     "openam" : {
         "apps" : {
             "header" : "マイアプリケーション",
-            "noneFound": "あなたに割り当てられたアプリケーションがありません、E
+            "noneFound": "あなたに割り当てられたアプリケーションがありません。"
         },
         "trusted" : {
             "devices" : {
-                "header" : "信頼済みのチE��イス",
+                "header" : "信頼済みのデバイス",
                 "deviceName" : "名前",
                 "lastUsed" : "最終使用",
-                "deleteDevice" : "チE��イスの削除"
+                "deleteDevice" : "デバイスの削除"
             }
         },
         "oAuth2" : {
             "tokens" : {
                 "appName" : "アプリケーション",
-                "scope" : "スコーチE,
+                "scope" : "スコープ",
                 "expiryDate" : "有効期限",
                 "deleteToken" : "アクセスの取り消し"
             }
         },
         "authentication": {
             "input": {
-                "name": "ユーザー吁E,
-                "password": "パスワーチE
+                "name": "ユーザー名",
+                "password": "パスワード"
             },
-            "unavailable": "OpenAM にログインできません、E
+            "unavailable": "OpenAM にログインできません。"
             
         }
     },    
@@ -377,17 +377,17 @@
             "common" : {
                 "components" : {
                     "LineTableView" : {
-                        "seeMoreItems" : "さらに見る、E,
-                        "noItems" : "アイチE��がありません、E
+                        "seeMoreItems" : "さらに見る。",
+                        "noItems" : "アイテムがありません。"
                     }
                 }
             },
             "admin" : {
                 "tasks" : {
                     "TasksMenuView" : {
-                        "noTasksAssigned" : "現在、あなたに割り当てられたタスクはありません、E,
-                        "noTasksInGroupQueue" : "現在、グループ�Eキュー冁E��タスクがありません、E,
-                        "denyDefaultReason" : "こ�E要求に対する拒否の琁E��を�E力してください、E,
+                        "noTasksAssigned" : "現在、あなたに割り当てられたタスクはありません。",
+                        "noTasksInGroupQueue" : "現在、グループのキュー内にタスクがありません。",
+                        "denyDefaultReason" : "この要求に対する拒否の理由を入力してください。",
                         "acceptanceForm" : {
                             "for" : "For",
                             "application" : "アプリケーション",
@@ -398,50 +398,50 @@
                             "initiator" : "イニシエータ",
                             "key" : "キー",
                             "requested" : "要求済み",
-                            "inQueue" : "キュー冁E,
+                            "inQueue" : "キュー内",
                             "actions" : "アクション"
                         }   
                     },
                     "TasksWithMenuView" : {
-                        "chooseTask" : "タスクの選抁E
+                        "chooseTask" : "タスクの選択"
                     },
                     "StartProcessDashboardView" : {
-                        "chooseProcess" : "起動する�Eロセスを選択してください、E,
-                        "noProcesses": "プロセスがありません、E,
-                        "noDataRequired": "要求されたチE�Eタはありません"
+                        "chooseProcess" : "起動するプロセスを選択してください。",
+                        "noProcesses": "プロセスがありません。",
+                        "noDataRequired": "要求されたデータはありません"
                     }
                 },
                 "users" : {
                     "UsersView" : {
                         "display" : "表示",
-                        "perPage" : "ペ�Eジ単佁E
+                        "perPage" : "ページ単位"
                     },
                     "AdminUserProfileView" : {
                         "profileOwnership" : "%sのプロファイル",
-                        "profileWillBeDeleted" : "%sのアカウントを削除します、E
+                        "profileWillBeDeleted" : "%sのアカウントを削除します。"
                     },
                     "ChangeUserPasswordDialog" : {
-                        "securityDataChangeForWhom" : "%sのセキュリチE��チE�Eタ変更します、E 
+                        "securityDataChangeForWhom" : "%sのセキュリティデータ変更します。" 
                     }
                 }
             },
             "apps" : {
                 "dashboard" : {
                     "NotificationsView" : {
-                        "noNotifications" : "現在、E��知がありません、E,
-                        "seeMoreNotifications" : "さらに通知を参照します、E
+                        "noNotifications" : "現在、通知がありません。",
+                        "seeMoreNotifications" : "さらに通知を参照します。"
                     }
                 }, 
                 "BaseApplicationsView" : {
-                    "noApplicationsHere" : "アプリケーションはありません、E,
-                    "noDefaultApplications" : "チE��ォルト�Eアプリケーションはありません、E,
-                    "noFrequentlyUsedApplications" : "頻繁に使用されてぁE��アプリケーションはありません、E
+                    "noApplicationsHere" : "アプリケーションはありません。",
+                    "noDefaultApplications" : "デフォルトのアプリケーションはありません。",
+                    "noFrequentlyUsedApplications" : "頻繁に使用されているアプリケーションはありません。"
                 },
                 "UsersApplicationsView" : {
-                    "noApplications" : "アプリケーションはありません、E
+                    "noApplications" : "アプリケーションはありません。"
                 },
                 "FrequentlyUsedApplicationsView" : {
-                    "clickHereToAdd" : "追加するためには、Esここ%sをクリチE��してください、E
+                    "clickHereToAdd" : "追加するためには、%sここ%sをクリックしてください。"
                 }
             }
         }
