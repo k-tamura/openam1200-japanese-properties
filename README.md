@@ -5,7 +5,7 @@ OpenAM 12.0.0 Japanese properties
 
 How to build
 ------
-1.    Click the "Download ZIP" button and get the zip file, openam1200-japanese-properties-master.zip.
+1.    Click the "Download ZIP" button and download openam1200-japanese-properties-master.zip.
 2.    Run commands as follows:
 ```bash
 svn co https://svn.forgerock.org/openam/tags/12.0.0/openam/
