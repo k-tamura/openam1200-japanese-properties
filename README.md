@@ -18,6 +18,7 @@ mvn -DskipTests=true clean install
 How to deploy without build
 ------
 If you do not want to build, you can deploy all files.
+
 1.    Click the "Download ZIP" button and download openam1200-japanese-properties-master.zip.
 2.    Run commands as follows:
 ```bash
