@@ -7,7 +7,7 @@ OpenAM 12.0.0 日本語化ファイル
 2.    以下のコマンドを実行:
 ```bash
 unzip openam1200-japanese-properties-master.zip
-rm openam1200-japanese-properties-master/README.md
+rm openam1200-japanese-properties-master/README.*
 svn co https://svn.forgerock.org/openam/tags/12.0.0/openam/
 cp -pr openam1200-japanese-properties-master/* openam/
 cd openam

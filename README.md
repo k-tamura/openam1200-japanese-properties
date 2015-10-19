@@ -7,7 +7,7 @@ How to build
 2.    Run commands as follows:
 ```bash
 unzip openam1200-japanese-properties-master.zip
-rm openam1200-japanese-properties-master/README.md
+rm openam1200-japanese-properties-master/README.*
 svn co https://svn.forgerock.org/openam/tags/12.0.0/openam/
 cp -pr openam1200-japanese-properties-master/* openam/
 cd openam
