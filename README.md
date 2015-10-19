@@ -1,8 +1,6 @@
 # openam1200-japanese-properties
 OpenAM 12.0.0 Japanese properties
 
-* Under construction.
-
 How to build
 ------
 1.    Click the "Download ZIP" button and download openam1200-japanese-properties-master.zip.
