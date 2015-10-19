@@ -22,13 +22,14 @@ If you do not want to build, you can deploy all files.
 1.    Click the "Download ZIP" button and download openam1200-japanese-properties-master.zip.
 2.    Run commands as follows:
 ```bash
-mkdir /var/lib/tomcat6/webapps/openam/XUI/locales/ja/
-mkdir /var/lib/tomcat6/webapps/openam/policyEditor/locales/ja/
+export AM_DIR=/usr/share/tomcat6/webapps/openam
+mkdir $AM_DIR/XUI/locales/ja/
+mkdir $AM_DIR/policyEditor/locales/ja/
 unzip openam1200-japanese-properties-master.zip
 cd openam1200-japanese-properties-master
-cp openam-ui-ria/src/main/resources/locales/ja/translation.json /var/lib/tomcat6/webapps/openam/XUI/locales/ja/translation.json
-cp openam-ui-policy/src/main/resources/locales/ja/translation.json /var/lib/tomcat6/webapps/openam/policyEditor/locales/ja/translation.json
-cp -rf openam-server-only/src/main/webapp/config/auth/default_ja/* /var/lib/tomcat6/webapps/openam/config/auth/default_ja/
-find . -name '*.properties' -print | xargs cp -t /var/lib/tomcat6/webapps/openam/WEB-INF/classes/
+cp openam-ui-ria/src/main/resources/locales/ja/translation.json $AM_DIR/XUI/locales/ja/translation.json
+cp openam-ui-policy/src/main/resources/locales/ja/translation.json $AM_DIR/policyEditor/locales/ja/translation.json
+cp -rf openam-server-only/src/main/webapp/config/auth/default_ja/* $AM_DIR/config/auth/default_ja/
+find . -name '*.properties' -print | xargs cp -t $AM_DIR/WEB-INF/classes/
 service tomcat6 restart
 ```
