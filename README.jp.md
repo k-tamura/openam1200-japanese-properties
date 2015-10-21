@@ -19,8 +19,16 @@ mvn -DskipTests=true clean install
 ------
 ビルドせずに既存のOpenAMにデプロイする場合は、以下の手順を実行する。
 
+1.    以下のコマンドを実行:
+```bash
+wget --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/deploy-jp-files.sh
+chmod +x deploy-jp-files.sh
+./deploy-jp-files.sh
+```
+または
+
 1.    "Download ZIP"ボタンをクリックし、openam1200-japanese-properties-master.zipをダウンロード。
-2.    以下のコマンドを実行:
+2.    以下のコマンドを実行(Tomcatの場合):
 ```bash
 export AM_DIR=/usr/share/tomcat6/webapps/openam
 mkdir $AM_DIR/XUI/locales/ja/
@@ -36,7 +44,7 @@ service tomcat6 restart
 
 デプロイしたファイルを削除する方法
 ------
-1.    以下のコマンドを実行:
+1.    以下のコマンドを実行(Tomcatの場合):
 ```bash
 export AM_DIR=/usr/share/tomcat6/webapps/openam
 rm -fr $AM_DIR/XUI/locales/ja/
