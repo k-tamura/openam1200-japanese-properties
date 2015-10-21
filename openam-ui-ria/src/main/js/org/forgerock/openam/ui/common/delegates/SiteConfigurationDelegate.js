@@ -26,10 +26,11 @@
 
 define("org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate", [
     "org/forgerock/commons/ui/common/util/Constants",
+    "org/forgerock/commons/ui/common/main/AbstractDelegate",
     "org/forgerock/commons/ui/common/main/Configuration",
     "org/forgerock/commons/ui/common/main/EventManager",
     "org/forgerock/commons/ui/common/util/UIUtils",
-    "org/forgerock/commons/ui/common/main/AbstractDelegate"
+    "org/forgerock/openam/ui/common/util/RealmHelper"
 ], function(constants, conf, eventManager, uiUtils, AbstractDelegate) {
     var obj = new AbstractDelegate('');
 

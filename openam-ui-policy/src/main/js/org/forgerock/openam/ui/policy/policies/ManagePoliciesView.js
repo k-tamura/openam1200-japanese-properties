@@ -1,7 +1,7 @@
 /**
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright (c) 2014-2015 ForgeRock AS. All rights reserved.
+ * Copyright (c) 2014 ForgeRock AS. All rights reserved.
  *
  * The contents of this file are subject to the terms
  * of the Common Development and Distribution License
@@ -29,100 +29,50 @@
 
 /*global window, define, $, _, document, console, sessionStorage */
 
-define("org/forgerock/openam/ui/policy/policies/ManagePoliciesView", [
+define("org/forgerock/openam/ui/policy/ManagePoliciesView", [
     "org/forgerock/commons/ui/common/main/AbstractView",
-    "org/forgerock/openam/ui/policy/common/GenericGridView",
+    "org/forgerock/openam/ui/policy/GenericGridView",
     "org/forgerock/commons/ui/common/util/UIUtils",
     "org/forgerock/commons/ui/common/main/Router",
-    "org/forgerock/openam/ui/policy/delegates/PolicyDelegate",
+    "org/forgerock/openam/ui/policy/PolicyDelegate",
     "org/forgerock/commons/ui/common/main/EventManager",
     "org/forgerock/commons/ui/common/util/Constants",
     "org/forgerock/commons/ui/common/main/Configuration"
 ], function (AbstractView, GenericGridView, uiUtils, router, policyDelegate, eventManager, constants, conf) {
     var ManagePoliciesView = AbstractView.extend({
         baseTemplate: 'templates/policy/BaseTemplate.html',
-        template: "templates/policy/policies/ManagePoliciesTemplate.html",
+        template: "templates/policy/ManagePoliciesTemplate.html",
 
         events: {
-            'click #deletePolicies': 'deletePolicies',
-            'click #deleteRef': 'deleteReferrals',
             'click .tab-links a': 'showTab'
         },
-
-        POLICIES_TAB: 0,
-        REFERRALS_TAB: 1,
-
-        render: function (args, callback) {
-            var self = this,
-                appPromise = policyDelegate.getApplicationByName(args[0]);
             this.data.realm = conf.globalData.auth.realm;
-            this.data.appName = args[0];
-            
+            this.data.appName = decodeURI(args[0]);
             this.data.referralsEnabled = conf.globalData && conf.globalData.referralsEnabled === "true";
-
-            this.parentRender(function () {
-                this.tabs = this.$el.find('.tab-content .tab');
-                this.tabLinks = this.$el.find('.tab-links li');
-
-                appPromise.done(function(app){
-                    var data = { appEditable: app.editable, appName: app.name };
-                    uiUtils.fillTemplateWithData("templates/policy/policies/ManagePoliciesHeaderTemplate.html", data, function(html){
-                        self.$el.find('#appNameHeader').html(html);
-                    });
-                });
-
                 this.policyGridView = new GenericGridView();
-                this.policyGridView.render({
-                    element: '#managePolicies',
-                    tpl: 'templates/policy/policies/ManagePoliciesGridTemplate.html',
-                    actionsTpl: 'templates/policy/policies/ManagePoliciesGridActionsTemplate.html',
-                    gridId: 'policies',
-                    initOptions: this.getPolicyGridInitOptions(),
-                    additionalOptions: this.getPolicyGridAdditionalOptions()
-                }, callback);
-
-                if (this.data.referralsEnabled) {
                     this.refGridView = new GenericGridView();
                     this.refGridView.render({
                         element: '#manageRefs',
-                        tpl: 'templates/policy/referrals/ManageRefsGridTemplate.html',
-                        actionsTpl: 'templates/policy/referrals/ManageRefsGridActionsTemplate.html',
+                        tpl: 'templates/policy/ManageRefsGridTemplate.html',
+                        actionsTpl: 'templates/policy/ManageRefsGridActionsTemplate.html',
                         gridId: 'refs',
                         initOptions: this.getRefGridInitOptions(),
                         additionalOptions: this.getRefGridAdditionalOptions()
                     }, callback);
-
-                    if (args[1] === 'referrals') {
-                        this.setActiveTab(this.REFERRALS_TAB);
-                    }
-                } else if (!this.data.referralsEnabled && args[1] === 'referrals') {
-                    router.routeTo(router.configuration.routes.managePolicies, {args: args, replace: true});
                 }
             });
         },
 
         getPolicyGridInitOptions: function () {
-            var self = this,
-                datePick = function(elem) { return self.policyGridView.datePicker(self.policyGridView, elem); };
-
+            var self = this;
             return {
                 url: '/' + constants.context + '/json' + (this.data.realm === '/' ? '' : this.data.realm) + '/policies',
-                colNames: ['', 'Name', 'Description', 'Author', 'Created', 'Modified By', 'Last Modified', 'Actions', 'Resources', 'Resource Attributes', 'Subject'],
                 colModel: [
 
-                    {name: 'iconChB',        width: 40, sortable: false, formatter: this.policyGridView.checkBoxFormatter, frozen: true, title: false, search: false, hidedlg: true},
                     {name: 'name',           width: 285, frozen: true, hidedlg: true},
                     {name: 'description',    width: 285, hidden: true, sortable: false},
                     {name: 'createdBy',      width: 250, hidden: true},
-                    {name: 'creationDate',   width: 150, index: 'creationDate', hidden: true, formatter: uiUtils.commonJQGridFormatters.dateFormatter, searchoptions: {searchhidden: true, dataInit: datePick, sopt: ['gt','lt','ge','le','eq']}},
                     {name: 'lastModifiedBy', width: 250, hidden: true},
-                    {name: 'lastModifiedDate',   width: 150, index: 'lastModifiedDate', hidden: true, formatter: uiUtils.commonJQGridFormatters.dateFormatter, searchoptions: {searchhidden: true, dataInit: datePick, sopt: ['gt','lt','ge','le','eq']}},
-                    {name: 'actionValues',   width: 285, sortable: false, search: false, formatter: uiUtils.commonJQGridFormatters.objectFormatter},
-                    {name: 'resources',      width: 285, sortable: false, search: false, formatter: uiUtils.commonJQGridFormatters.arrayFormatter},
-                    {name: 'resourceAttributes', width: 285, sortable: false, hidden: true, search: false, formatter: uiUtils.commonJQGridFormatters.arrayFormatter},
-                    {name: 'subject',        width: 285, sortable: false, hidden: true, formatter: uiUtils.commonJQGridFormatters.objectFormatter}
-
-                ],
                 beforeSelectRow: function (rowId, e) {
                     var checkBoxCellSelected = self.policyGridView.isCheckBoxCellSelected(e);
                     if (!checkBoxCellSelected) {
@@ -140,7 +90,6 @@ define("org/forgerock/openam/ui/policy/policies/ManagePoliciesView", [
                         console.log('loadError', xhr.responseText, status, error);
                     }
                 },
-                search: true,
                 sortname: 'name',
                 width: 915,
                 shrinkToFit: false,
@@ -154,12 +103,9 @@ define("org/forgerock/openam/ui/policy/policies/ManagePoliciesView", [
                 url: '/' + constants.context + '/json' + (this.data.realm === '/' ? '' : this.data.realm) + '/referrals',
                 colNames: ['', 'Name', 'Resources', 'Realms', 'Created', 'Last Modified', 'Created By', 'ModifiedBy'],
                 colModel: [
-                    {name: 'iconChB',        width: 40,  sortable: false, formatter: this.refGridView.checkBoxFormatter, frozen: true, title: false, search: false, hidedlg: true},
                     {name: 'name',           width: 285, frozen: true, hidedlg: true},
                     {name: 'resources',      width: 285, sortable: false, formatter: this.referralResourceFormatter},
                     {name: 'realms',         width: 285, sortable: false, formatter: uiUtils.commonJQGridFormatters.arrayFormatter},
-                    {name: 'creationDate',   width: 150, search: false, hidden: true, formatter: uiUtils.commonJQGridFormatters.dateFormatter},
-                    {name: 'lastModified',   width: 150, search: false, hidden: true, formatter: uiUtils.commonJQGridFormatters.dateFormatter},
                     {name: 'createdBy',      width: 250, hidden: true},
                     {name: 'lastModifiedBy', width: 250, hidden: true}
                 ],
@@ -203,8 +149,20 @@ define("org/forgerock/openam/ui/policy/policies/ManagePoliciesView", [
                 storageKey: 'PE-mng-pols-sel-' + this.data.appName,
                 // TODO: completely remove serializeGridData() from here once AME-4925 is ready.
                 serializeGridData: function (postedData) {
-                    var colNames = _.pluck($(this).jqGrid('getGridParam', 'colModel'), 'name');
-                    return self.policyGridView.serializeDataToFilter(postedData, colNames);
+                    var colNames = _.pluck($(this).jqGrid('getGridParam', 'colModel'), 'name'),
+                        filter = '';
+
+                    _.each(colNames, function (element, index, list) {
+                        if (postedData[element]) {
+                            if (filter.length > 0) {
+                                filter += ' AND ';
+                            }
+                            filter = filter.concat(element, ' eq "*', postedData[element], '*"');
+                        }
+                        delete postedData[element];
+                    });
+
+                    return filter;
                 },
                 callback: function () {
                     self.policyGridView.grid.on('jqGridAfterInsertRow', function (e, rowid, rowdata) {
@@ -284,18 +242,14 @@ define("org/forgerock/openam/ui/policy/policies/ManagePoliciesView", [
             e.preventDefault();
 
             var index = $(e.currentTarget).parent().index(),
-                route = index === this.POLICIES_TAB ? router.configuration.routes.managePolicies : router.configuration.routes.manageReferrals;
+                tabs =  this.$el.find('.tab-content .tab'),
+                tabLinks = this.$el.find('.tab-links li');
 
-            this.setActiveTab(index);
-            router.routeTo(route, {args: [this.data.appName], replace: true});
-        },
+            tabLinks.not(':eq('+ index +')').removeClass('active-tab');
+            tabLinks.eq(index).addClass('active-tab');
 
-        setActiveTab: function (index) {
-            this.tabLinks.not(':eq(' + index + ')').removeClass('active-tab');
-            this.tabLinks.eq(index).addClass('active-tab');
-
-            this.tabs.not(':eq(' + index + ')').addClass('inactive-tab');
-            this.tabs.eq(index).removeClass('inactive-tab');
+            tabs.not(':eq('+ index +')').addClass('inactive-tab');
+            tabs.eq(index).removeClass('inactive-tab');
         }
     });
 
