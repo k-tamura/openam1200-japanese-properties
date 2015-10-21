@@ -8,6 +8,7 @@ OpenAM 12.0.0 日本語化ファイル
 ```bash
 unzip openam1200-japanese-properties-master.zip
 rm openam1200-japanese-properties-master/README.*
+rm openam1200-japanese-properties-master/deploy-jp-files.sh
 svn co https://svn.forgerock.org/openam/tags/12.0.0/openam/
 cp -r openam1200-japanese-properties-master/* openam/
 cd openam
