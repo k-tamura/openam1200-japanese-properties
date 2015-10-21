@@ -11,6 +11,7 @@ rm openam1200-japanese-properties-master/README.*
 rm openam1200-japanese-properties-master/deploy-jp-files.sh
 svn co https://svn.forgerock.org/openam/tags/12.0.0/openam/
 cp -r openam1200-japanese-properties-master/* openam/
+rm -fr openam1200-japanese-properties-master
 cd openam
 export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
 mvn -DskipTests=true clean install
