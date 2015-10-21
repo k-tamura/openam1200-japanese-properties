@@ -33,3 +33,16 @@ cp -rf openam-server-only/src/main/webapp/config/auth/default_ja/* $AM_DIR/confi
 find . -name '*.properties' -print | xargs cp -t $AM_DIR/WEB-INF/classes/
 service tomcat6 restart
 ```
+
+デプロイしたファイルを削除する方法
+------
+1.    以下のコマンドを実行:
+```bash
+export AM_DIR=/usr/share/tomcat6/webapps/openam
+rm -fr $AM_DIR/XUI/locales/ja/
+rm -fr $AM_DIR/policyEditor/locales/ja/
+rm -f $AM_DIR/XUI/locales/ja/translation.json
+rm -f $AM_DIR/policyEditor/locales/ja/translation.json
+rm -f $AM_DIR/config/auth/default_ja/*_ja.properties
+service tomcat6 restart
+```
