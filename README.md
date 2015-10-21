@@ -19,7 +19,7 @@ How to deploy without build
 ------
 If you do not want to build, you can deploy all files.
 
-1.    Execute the commands (if using Tomcat 6):
+1.    Execute the commands:
 ```bash
 wget --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/deploy-jp-files.sh
 chmod +x deploy-jp-files.sh
