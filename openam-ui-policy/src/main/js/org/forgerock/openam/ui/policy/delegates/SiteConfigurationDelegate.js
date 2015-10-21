@@ -24,7 +24,7 @@
 
 /*global define, _ */
 
-define("org/forgerock/openam/ui/policy/delegates/SiteConfigurationDelegate", [
+define("org/forgerock/openam/ui/policy/SiteConfigurationDelegate", [
     "org/forgerock/commons/ui/common/util/Constants",
     "org/forgerock/commons/ui/common/main/Configuration",
     "org/forgerock/commons/ui/common/main/EventManager",
