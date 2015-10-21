@@ -19,8 +19,8 @@ How to deploy without build
 ------
 If you do not want to build, you can deploy all files.
 
-1.    Click the "Download ZIP" button and download openam1200-japanese-properties-master.zip.
-2.    Run commands as follows:
+1.    Click the "Download ZIP" button to download openam1200-japanese-properties-master.zip.
+2.    Execute the commands:
 ```bash
 export AM_DIR=/usr/share/tomcat6/webapps/openam
 mkdir $AM_DIR/XUI/locales/ja/
@@ -36,7 +36,7 @@ service tomcat6 restart
 
 How to remove the files
 ------
-1.    Run commands as follows:
+1.    Execute the commands:
 ```bash
 export AM_DIR=/usr/share/tomcat6/webapps/openam
 rm -fr $AM_DIR/XUI/locales/ja/
