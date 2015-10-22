@@ -10,7 +10,7 @@
             "CommonMessages" : {
                 "authenticationFailed" : "ユーザー名/パスワードの組み合わせが不正です。",
                 "loginFailureLockout" : "このユーザーはアクティブではありません。システム管理者にお問い合わせください。",
-                "maxSessionsLimitOrSessionQuota": "最大セッション数の限度に達したか、セッション制限いっぱいになりました。",
+                "maxSessionsLimitOrSessionQuota": "最大セッション数の限度に達したか、セッション制限がいっぱいになりました。",
                 "invalidRealm" : "レルムが存在しません。",
                 "serviceUnavailable" : "サービスが利用できません。",
                 "unknown" : "不明なエラー。システム管理者にお問い合わせください。",
@@ -101,7 +101,7 @@
                 "securityDataChange" : "セキュリティデータの変更",
                 "enterNewPasswordToChange" : "パスワードを変更するには、以下のフィールドに新しいパスワードを入力してください。",
                 "selectQuestionAndAnserIfYouWant" : "設定する場合は、質問を選択しその答えを入力してください。",
-                "securityQuestionAndAnserExplanation" : "選択したセキュリティの質問と設定したそれに対する答えは、パスワードを忘れた場合にあなたを特定するために使用されます。"
+                "securityQuestionAndAnserExplanation" : "選択したセキュリティの質問とそれに対し設定した答えは、パスワードを忘れた場合にあなたを特定するために使用されます。"
             },
             "ConfirmPasswordDialogTemplate" : {
                 "title" : "現在のパスワード",

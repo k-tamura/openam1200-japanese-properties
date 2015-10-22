@@ -88,7 +88,7 @@
         "securityDataChange" : "セキュリティデータの変更",
         "enterNewPasswordToChange" : "パスワードを変更するには、以下のフィールドに新しいパスワードを入力してください。",
         "selectQuestionAndAnserIfYouWant" : "設定する場合は、質問を選択しその答えを入力してください。",
-        "securityQuestionAndAnserExplanation" : "選択したセキュリティの質問と設定したそれに対する答えは、パスワードを忘れた場合にあなたを特定するために使用されます。"
+        "securityQuestionAndAnserExplanation" : "選択したセキュリティの質問とそれに対して設定した答えは、パスワードを忘れた場合にあなたを特定するために使用されます。"
 
       },
       "ChangeSiteIdentificationDialogTemplate": {
