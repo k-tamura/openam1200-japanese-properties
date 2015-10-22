@@ -34,18 +34,20 @@ service tomcat6 restart
 2.    以下のコマンドを実行(Tomcatの場合):
 ```bash
 export AM_DIR=/usr/share/tomcat6/webapps/openam
-mkdir $AM_DIR/XUI/locales/ja/
-mkdir $AM_DIR/policyEditor/locales/ja/
+mkdir -p $AM_DIR/XUI/locales/ja/
+mkdir -p $AM_DIR/policyEditor/locales/ja/
 unzip openam1200-japanese-properties-master.zip
-cd openam1200-japanese-properties-master
-mv $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
-mv $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
-cp openam-ui-policy/src/main/js/org/forgerock/openam/ui/policy/delegates/SiteConfigurationDelegate.js $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/
-cp openam-ui-ria/src/main/js/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/
-cp -r openam-ui-ria/src/main/resources/locales/ja/translation.json $AM_DIR/XUI/locales/ja/
-cp -r openam-ui-policy/src/main/resources/locales/ja/translation.json $AM_DIR/policyEditor/locales/ja/
-cp -rf openam-server-only/src/main/webapp/config/auth/default_ja/* $AM_DIR/config/auth/default_ja/
-find . -name '*.properties' -print | xargs cp -t $AM_DIR/WEB-INF/classes/
+cp -pr $AM_DIR/config/auth/default_ja $AM_DIR/config/auth/default_ja_bak
+mv $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak
+mv $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak
+cp openam1200-japanese-properties-master/openam-ui-policy/src/main/js/org/forgerock/openam/ui/policy/delegates/SiteConfigurationDelegate.js $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
+cp openam1200-japanese-properties-master/openam-ui-ria/src/main/js/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
+cp -r openam1200-japanese-properties-master/openam-ui-ria/src/main/resources/locales/ja/translation.json $AM_DIR/XUI/locales/ja/
+cp -r openam1200-japanese-properties-master/openam-ui-policy/src/main/resources/locales/ja/translation.json $AM_DIR/policyEditor/locales/ja/
+cp -rf openam1200-japanese-properties-master/openam-server-only/src/main/webapp/config/auth/default_ja/* $AM_DIR/config/auth/default_ja/
+find openam1200-japanese-properties-master -name '*.properties' -print | xargs cp -t $AM_DIR/WEB-INF/classes/
+rm -fr openam1200-japanese-properties-master
+rm openam1200-japanese-properties-master.zip
 service tomcat6 restart
 ```
 
@@ -67,7 +69,8 @@ rm -fr $AM_DIR/XUI/locales/ja/
 rm -fr $AM_DIR/policyEditor/locales/ja/
 rm -f $AM_DIR/XUI/locales/ja/translation.json
 rm -f $AM_DIR/policyEditor/locales/ja/translation.json
-rm -f $AM_DIR/config/auth/default_ja/*_ja.properties
+rm -f $AM_DIR/WEB-INF/classes/*_ja.properties
+mv $AM_DIR/config/auth/default_ja_bak $AM_DIR/config/auth/default_ja
 mv $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
 mv $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
 service tomcat6 restart

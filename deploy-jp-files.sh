@@ -11,7 +11,8 @@ rm -fr $AM_DIR/XUI/locales/ja/
 rm -fr $AM_DIR/policyEditor/locales/ja/
 rm -f $AM_DIR/XUI/locales/ja/translation.json
 rm -f $AM_DIR/policyEditor/locales/ja/translation.json
-rm -f $AM_DIR/config/auth/default_ja/*_ja.properties
+rm -f $AM_DIR/WEB-INF/classes/*_ja.properties
+mv $AM_DIR/config/auth/default_ja_bak $AM_DIR/config/auth/default_ja
 mv $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
 mv $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
 
@@ -19,6 +20,7 @@ mv $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegat
 mkdir -p $AM_DIR/XUI/locales/ja/
 mkdir -p $AM_DIR/policyEditor/locales/ja/
 unzip openam1200-japanese-properties-master.zip
+cp -pr $AM_DIR/config/auth/default_ja $AM_DIR/config/auth/default_ja_bak
 mv $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak
 mv $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak
 cp openam1200-japanese-properties-master/openam-ui-policy/src/main/js/org/forgerock/openam/ui/policy/delegates/SiteConfigurationDelegate.js $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
