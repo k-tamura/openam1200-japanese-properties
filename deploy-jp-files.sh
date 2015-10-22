@@ -1,7 +1,12 @@
+#!/bin/sh
+# Get the deploy script.
 wget --no-check-certificate https://codeload.github.com/k-tamura/openam1200-japanese-properties/zip/master  -O openam1200-japanese-properties-master.zip
+
+# Get a OpenAM installation directory.
 echo "Please input OpenAM installation directory. For example, /usr/share/tomcat6/webapps/openam"
 read AM_DIR
 
+# Remove backup files if exist.
 rm -fr $AM_DIR/XUI/locales/ja/
 rm -fr $AM_DIR/policyEditor/locales/ja/
 rm -f $AM_DIR/XUI/locales/ja/translation.json
@@ -10,6 +15,7 @@ rm -f $AM_DIR/config/auth/default_ja/*_ja.properties
 mv $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
 mv $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
 
+# Deploy Japanese properties, xml and json files.
 mkdir -p $AM_DIR/XUI/locales/ja/
 mkdir -p $AM_DIR/policyEditor/locales/ja/
 unzip openam1200-japanese-properties-master.zip
