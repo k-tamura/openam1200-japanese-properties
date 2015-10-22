@@ -9,11 +9,11 @@
         "messages" : {
             "CommonMessages" : {
                 "authenticationFailed" : "ユーザー名/パスワードの組み合わせが不正です。",
-                "loginFailureLockout" : "このユーザーはアクティブではありません。システム管理者に問い合わせてください。",
+                "loginFailureLockout" : "このユーザーはアクティブではありません。システム管理者にお問い合わせください。",
                 "maxSessionsLimitOrSessionQuota": "最大セッション数の限度に達したか、セッション制限いっぱいになりました。",
                 "invalidRealm" : "レルムが存在しません。",
                 "serviceUnavailable" : "サービスが利用できません。",
-                "unknown" : "不明なエラー。システム管理者に問い合わせてください。",
+                "unknown" : "不明なエラー。システム管理者にお問い合わせください。",
                 "loggedIn" : "正常にログインしました。",
                 "errorFetchingData" : "ユーザーデータフェッチ中のエラー。",
                 "loggedOut" : "ログアウトしました。",
@@ -33,14 +33,14 @@
                 "usernameNotFound" : "ユーザー名が見つかりません。",
                 "noEmailProvided" : "プロファイルに電子メールが設定されていません。",
                 "emailNotSent" : "電子メールが送信されませんでした",
-                "unableToRegister" : "登録できませんでした。システム管理者に問い合わせてください。",
+                "unableToRegister" : "登録できませんでした。システム管理者にお問い合わせください。",
                 "changedPassword" : "パスワードが変更されました。",
                 "profileUpdateFailed" : "プロファイル更新中に問題が発生しました。",
                 "profileUpdateSuccessful" : "プロファイルが更新されました。",
-                "userNameUpdated" : "ユーザー名は正常に更新されました。",
+                "userNameUpdated" : "ユーザー名が正常に更新されました。",
                 "afterRegistration" : "アカウントが正常に登録されました。",
                 "siteIdentificationChanged" : "サイトの識別画像が変更されました。",
-                "userAlreadyExists" : "ユーザーが既に存在します。",
+                "userAlreadyExists" : "ユーザーがすでに存在します。",
                 "errorDeletingNotification" : "通知の削除エラー。",
                 "errorFetchingNotifications" : "通知の検索エラー。",
                 "identityNoSpace" : "アイデンティティ名の先頭または末尾に<br>空白を含めることはできません。",
@@ -50,11 +50,11 @@
             "AdminMessages" : {
                 "cannotDeleteYourself" : "自身を削除することはできません。",
                 "userDeleted" : "ユーザーが削除されました。",
-                "userDeleteError" : "ユーザを削除する際にエラーが発生しました。",
+                "userDeleteError" : "ユーザーを削除する際にエラーが発生しました。",
                 "userApplicationsUpdate" : "アプリケーションの設定が変更されました。",
                 "completedTask" : "タスクが完了しました。",
-                "claimedTask" : "Task has been claimed.",
-                "unclaimedTask" : "Task has been unclaimed.",
+                "claimedTask" : "タスクが請求されています。",
+                "unclaimedTask" : "タスクが請求されていません。",
                 "startedProcess" : "プロセスが開始されました。"
             }
         },
@@ -83,9 +83,9 @@
             },
             "LoginTemplate" : {
                 "loginRemember" : "ユーザー名を記憶する。",
-                "noAccountQuestion" : "アカウントを持っていないですか?",
-                "registerAccount" : "アカウントを登録して下さい。",
-                "problemLoggingQuestion" : "ログインのトラブルがありますか?",
+                "noAccountQuestion" : "アカウントを持っていないですか？",
+                "registerAccount" : "アカウントを登録してください。",
+                "problemLoggingQuestion" : "ログインのトラブルがありますか？",
                 "resetPassword" : "パスワードのリセット",
                 "siteIdentificationHeader": "サイトの識別",
                 "siteIdentificationExplanation": "ログイン名を入力してください。<br />サイトの画像とパスフレーズがここに表示されます。"
@@ -105,7 +105,7 @@
             },
             "ConfirmPasswordDialogTemplate" : {
                 "title" : "現在のパスワード",
-                "explanation1" : "次の属性を変更すると、再認証が必要になりす: ",
+                "explanation1" : "次の属性を変更すると、再認証が必要になります: ",
                 "explanation2" : "継続するために現在のパスワードを確認してください。"
             },
             "ChangeSiteIdentificationDialogTemplate" : {
@@ -116,7 +116,7 @@
                 "enterYourOldPassword" : "古いパスワードを入力してください。"
             },
             "ForgottenPasswordTemplate" : {
-                "forgottenPasswordQuestion" : "パスワードを忘れましたか?",
+                "forgottenPasswordQuestion" : "パスワードを忘れましたか？",
                 "enterLogin" : "ユーザー名を入力してください。パスワードのリセット手順が記載されたメールを送信します。",
                 "changeForgottenPassword" : "パスワードの変更",
                 "emailSubject" : "OpenAM: パスワードリセットを要求しました。",
@@ -136,7 +136,7 @@
             "UserRegistrationTemplate" : {
                 "registerYourAccount" : "アカウントの登録",
                 "logIn" : "Log in",
-                "haveAccoutQuestion" : "既にアカウントを持っていますか？",
+                "haveAccoutQuestion" : "すでにアカウントを持っていますか？",
                 "agreeToTerms" : "%s利用規約%sに同意します。",
                 "emailSubject" : "OpenAM への登録",
                 "emailMessage" : "登録プロセスを続行するには、以下のリンクを参照ください:",
@@ -229,7 +229,7 @@
                 "CANNOT_CONTAIN_OTHERS" : "値を含めることはできません: __disallowedFields__",
                 "MIN_LENGTH" : "最低 __minLength__ 文字です。",
                 "REQUIRED" : "空白にすることはできません。",
-                "UNIQUE" : "既に存在します。",
+                "UNIQUE" : "すでに存在します。",
                 "REAUTH_REQUIRED" : "",
                 "formContainsErrors" : "フォームには検証エラーが含まれています。",
                 "atLeastOneCapitalLetter" : "少なくとも大文字が 1 文字以上必要です。",
@@ -237,8 +237,8 @@
                 "atLeast8Characters" : "少なくとも 8 文字以上必要です。",
                 "cannotMatchLogin" : "ログインが一致しません。",
                 "confirmationMatchesPassword" : "新規パスワードとパスワード(確認)が一致。",
-                "usernameExists" : "ユーザー名は既に存在します。",
-                "emailAddressAlreadyExists" : "電子メールアドレスは既に存在します。",
+                "usernameExists" : "ユーザー名がすでに存在します。",
+                "emailAddressAlreadyExists" : "電子メールアドレスがすでに存在します。",
                 "onlyAlphabeticCharacters" : "英字のみです。",
                 "onlyNumbersAndSpecialCharacters" : "数字と特殊文字のみです。",
                 "cannotMatchOldPassword" : "古いパスワードと一致しません。",
@@ -247,16 +247,16 @@
                 "incorrectPassword" : "パスワードが正しくありません。",
                 "incorrectSecurityAnswer" : "応答が無効です。",
                 "required" : "必須です。",
-                "emailNotValid" : "メールアドレスが無効です。",
-                "emailExists" : "電子メールアドレスは既に存在します。",
-                "shouldBeLong" : "log 値である必要があります。",
+                "emailNotValid" : "電子メールアドレスが無効です。",
+                "emailExists" : "電子メールアドレスがすでに存在します。",
+                "shouldBeLong" : "long 値である必要があります。",
                 "wrongDateFormat" : "フォーマットが不正です。"
             }
          },
          "user" : {
             "user" : "ユーザー",
             "login" : "ログイン",
-            "loginConfirm" : "すでにログインしています。ログアウトし、別の組織にログインしますか?",
+            "loginConfirm" : "すでにログインしています。ログアウトし、別の組織にログインしますか？",
             "profile" : "プロファイル",
             "myProfile" : "マイプロファイル",
             "userProfile" : "ユーザープロファイル",
@@ -306,8 +306,8 @@
          "task" : {
             "unassigned" : "未アサイン",
             "assignToMe" : "私にアサイン",
-            "claim" : "クレーム",
-            "unclaim" : "アンクレーム",
+            "claim" : "請求",
+            "unclaim" : "未請求",
             "approve" : "承認",
             "deny" : "拒否",
             "requeue" : "再キューイング",
@@ -326,7 +326,7 @@
             "yourFrequentlyUsedApplications" : "頻繁に使用するアプリケーション",
             "applicationsYouHaveAdded" : "追加したアプリケーション",
             "defaultApplications" : "デフォルトアプリケーション",
-            "addMoreApplications" : "さらにアプリケーションの追加",
+            "addMoreApplications" : "さらにアプリケーションを追加",
             "allAvailableApps" : "使用可能なすべてのアプリケーション",
             "dropApplicationsHere" : "ここにアプリケーションをドロップ"
          },

@@ -10,7 +10,7 @@
       "CommonMessages": {
         "authenticationFailed": "ユーザー名/パスワードの組み合わせが不正です。",
         "serviceUnavailable" : "サービスが利用できません。",
-        "unknown" : "不明なエラー。システム管理者に問い合わせてください。",
+        "unknown" : "不明なエラー。システム管理者にお問い合わせください。",
         "loggedIn" : "正常にログインしました。",
         "errorFetchingData": "ユーザーデータフェッチ中のエラー。",
         "loggedOut": "ログアウトしました。",
@@ -27,25 +27,25 @@
         "changedPassword" : "パスワードが変更されました。",
         "profileUpdateFailed" : "プロファイル更新中に問題が発生しました。",
         "profileUpdateSuccessful" : "プロファイルが更新されました。",
-        "userNameUpdated" : "ユーザー名は正常に更新されました。",
+        "userNameUpdated" : "ユーザー名が正常に更新されました。",
         "afterRegistration": "ユーザーが正常に登録されました。",
         "siteIdentificationChanged": "サイトの識別画像が変更されました。",
         "securityDataChanged": "セキュリティデータが変更されました。",
-        "userAlreadyExists": "ユーザーが既に存在します。",
+        "userAlreadyExists": "ユーザーがすでに存在します。",
         "errorDeletingNotification" : "通知の削除エラー。",
         "errorFetchingNotifications" : "通知の検索エラー。"
       },
       "PolicyMessages": {
-        "applicationCreated": "アプリケーションの作成に成功しました。",
-        "applicationUpdated": "アプリケーションが正常に更新されました更新しました。",
-        "referralCreated": "参照が正常に作成しました。",
+        "applicationCreated": "アプリケーションが正常に作成されました。",
+        "applicationUpdated": "アプリケーションが正常に更新されました。",
+        "referralCreated": "参照が正常に作成されました。",
         "referralUpdated": "参照が正常に更新されました。",
-        "deleteSuccess": "正常に削除しました。",
+        "deleteSuccess": "正常に削除されました。",
         "deleteFail": "削除に失敗しました。",
-        "policyCreated": "ポリシーの作成に成功しました。",
-        "policyUpdated": "ポリシーを正常に更新しました。",
+        "policyCreated": "ポリシーが正常に作成されました。",
+        "policyUpdated": "ポリシーが正常に更新されました。",
         "ruleErrorFullLogical": "親論理コンテナは、子を1つだけ受け入れることができます。",
-        "ruleHelperTryAndOr": "複数の子が必要な場合は、タイプを変更するか、<br>または AND か OR タイプの子を追加してみてください。",
+        "ruleHelperTryAndOr": "複数の子が必要な場合は、タイプを変更するか、<br>または AND か OR タイプの子を追加してください。",
         "unableToRetrievePolicy": "ポリシーを取得できません。",
         "invalidResource": "無効なリソースです。",
         "duplicateResource": "重複するリソースです。",
@@ -70,9 +70,9 @@
       },
       "LoginTemplate" : {
         "loginRemember" : "ユーザー名を記憶する。",
-        "noAccountQuestion" : "アカウントを持っていないですか?",
-        "registerAccount" : "アカウントを登録して下さい。",
-        "problemLoggingQuestion" : "ログインのトラブルがありますか?",
+        "noAccountQuestion" : "アカウントを持っていないですか？",
+        "registerAccount" : "アカウントを登録してください。",
+        "problemLoggingQuestion" : "ログインのトラブルがありますか？",
         "resetPassword" : "パスワードのリセット",
         "siteIdentificationHeader": "サイトの識別",
         "siteIdentificationExplanation": "ログイン名を入力してください。<br />サイトの画像とパスフレーズがここに表示されます。"
@@ -92,14 +92,14 @@
 
       },
       "ChangeSiteIdentificationDialogTemplate": {
-        "siteImageAndPhaseExplanation" : "選択したサイトのイメージとフレーズは、正当なサイトにログインすることを確認するためにログイン時に表示されます。"
+        "siteImageAndPhaseExplanation" : "選択したサイトのイメージとフレーズは、正当なサイトにログインすることを確認するため、ログイン時に表示されます。"
       },
       "EnterOldPasswordDialog": {
         "passwordAndSecurityQuestionChange" : "パスワードとセキュリティの質問の変更",
         "enterYourOldPassword" : "古いパスワードを入力してください。"
       },
       "ForgottenPasswordTemplate": {
-        "forgottenPasswordQuestion" : "パスワードを忘れましたか?",
+        "forgottenPasswordQuestion" : "パスワードを忘れましたか？",
          "enterLogin" : "継続するには、ユーザー名を入力してください。"
       },
       "TermsOfUseTemplate": {
@@ -113,7 +113,7 @@
       "UserRegistrationTemplate": {
         "registerYourAccount" : "アカウントの登録",
         "logIn" : "Log in",
-        "haveAccoutQuestion" : "既にアカウントを持っていますか？",
+        "haveAccoutQuestion" : "すでにアカウントを持っていますか？",
         "agreeToTerms": "に同意します。"
       }
     }
@@ -158,10 +158,10 @@
         "AT_LEAST_X_CAPITAL_LETTERS" : "最低 __numCaps__ capital 文字以上は必要です。",
         "AT_LEAST_X_NUMBERS" : "少なくとも __numNums__ 個以上は必要です。",
         "CANNOT_CONTAIN_OTHERS" : "値を含めることはできません: __disallowedFields__",
-        "CANNOT_CONTAIN_CHARACTERS": "Cannot contain characters: __forbiddenChars__",
+        "CANNOT_CONTAIN_CHARACTERS": "文字を含めることはできません: __forbiddenChars__",
         "MIN_LENGTH" : "最低 __minLength__ 文字です。",
         "REQUIRED" : "空白にすることはできません。",
-        "UNIQUE" : "既に存在します。",
+        "UNIQUE" : "すでに存在します。",
         "REAUTH_REQUIRED" : "",
         "formContainsErrors" : "フォームには検証エラーが含まれています。",
         "atLeastOneCapitalLetter" : "少なくとも大文字が 1 文字以上必要です。",
@@ -169,8 +169,8 @@
         "atLeast8Characters" : "少なくとも 8 文字以上必要です。",
         "cannotMatchLogin" : "ログインが一致しません。",
         "confirmationMatchesPassword" : "確認がパスワードと一致します。",
-        "usernameExists" : "ユーザー名は既に存在します。",
-        "emailAddressAlreadyExists" : "電子メールアドレスは既に存在します。",
+        "usernameExists" : "ユーザー名がすでに存在します。",
+        "emailAddressAlreadyExists" : "電子メールアドレスがすでに存在します。",
         "onlyAlphabeticCharacters" : "英字のみです。",
         "onlyNumbersAndSpecialCharacters" : "数字と特殊文字のみです。",
         "cannotMatchOldPassword" : "古いパスワードと一致しません。",
@@ -179,9 +179,9 @@
         "incorrectPassword" : "パスワードが正しくありません。",
         "incorrectSecurityAnswer" : "応答が無効です。",
         "required" : "必須です。",
-        "emailNotValid" : "メールアドレスが無効です。",
-        "emailExists" : "電子メールアドレスは既に存在します。",
-        "shouldBeLong" : "log 値である必要があります。",
+        "emailNotValid" : "電子メールアドレスが無効です。",
+        "emailExists" : "電子メールアドレスがすでに存在します。",
+        "shouldBeLong" : "long 値である必要があります。",
         "wrongDateFormat" : "フォーマットが不正です。"
       }
     },
@@ -270,7 +270,7 @@
       "noStaticAttributes": "静的属性がありません...",
       "noSubjectAttributes": "対象属性がありません...",
 
-      "viewAllApplications": "内部のすべてののアプリケーションを表示",
+      "viewAllApplications": "内部のすべてのアプリケーションを表示",
       "topLeveRealm": "トップレベルレルム",
 
       "buttons": {
@@ -481,7 +481,7 @@
               }
           },
           "IPv6": {
-              "title": "IPv6 Address/DNS Name",
+              "title": "IPv6 アドレス/DNS 名",
               "props": {
                   "ipRange": "IP レンジ",
                   "dnsName": "DNS 名",
@@ -534,8 +534,8 @@
                   "endTime": "終了時刻",
                   "startDay": "開始日",
                   "endDay": "終了日",
-                  "startDate": "開始日",
-                  "endDate": "終了日",
+                  "startDate": "開始日付",
+                  "endDate": "終了日付",
                   "enforcementTimeZone": "タイムゾーン",
                   "enterTimeZone": "タイムゾーンを入力してください。"
               },
