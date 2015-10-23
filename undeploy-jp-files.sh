@@ -1,9 +1,9 @@
 #!/bin/sh
-# Get a OpenAM installation directory.
+# Get the Japanese properties from GitHub.
 echo "Please input OpenAM installation directory. For example, /usr/share/tomcat6/webapps/openam"
 read AM_DIR
 
-# Remove backup files if exist.
+# Restore and remove backup files if exist.
 rm -fr $AM_DIR/XUI/locales/ja
 rm -fr $AM_DIR/policyEditor/locales/ja
 rm -f $AM_DIR/WEB-INF/classes/*_ja.properties
