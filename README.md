@@ -3,8 +3,7 @@ OpenAM 12.0.0 Japanese properties.
 
 How to build
 ------
-You need SVN client version 1.6.x to checkout code anonymously.
-You need Maven 3.0.x for building.
+You need SVN client version 1.6.x to checkout code anonymously and Maven 3.0.x for building.
 
 1.    Click the "Download ZIP" button to download openam1200-japanese-properties-master.zip.
 2.    Execute the commands:
@@ -24,17 +23,19 @@ How to deploy without build
 ------
 If you do not want to build, you can deploy all files.
 
-1.    Execute the commands (if using Tomcat 6):
+1.    Shut down the web application container in which you deployed OpenAM.
+2.    Execute the commands:
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/deploy-jp-files.sh
 chmod +x deploy-jp-files.sh
 ./deploy-jp-files.sh
-service tomcat6 restart
 ```
+3.    Start up the web application container.
 Or
 
 1.    Click the "Download ZIP" button to download openam1200-japanese-properties-master.zip.
-2.    Execute the commands (if using Tomcat 6):
+2.    Shut down the web application container in which you deployed OpenAM.
+3.    Execute the commands:
 ```bash
 export AM_DIR=/usr/share/tomcat6/webapps/openam
 mkdir -p $AM_DIR/XUI/locales/ja/
@@ -51,21 +52,23 @@ cp -rf openam1200-japanese-properties-master/openam-server-only/src/main/webapp/
 find openam1200-japanese-properties-master -name '*.properties' -print | xargs cp -t $AM_DIR/WEB-INF/classes/
 rm -fr openam1200-japanese-properties-master
 rm openam1200-japanese-properties-master.zip
-service tomcat6 restart
 ```
+4.    Start up the web application container.
 
 How to remove the files
 ------
-1.    Execute the commands (if using Tomcat 6):
+1.    Shut down the web application container in which you deployed OpenAM.
+2.    Execute the commands:
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/undeploy-jp-files.sh
 chmod +x undeploy-jp-files.sh
 ./undeploy-jp-files.sh
-service tomcat6 restart
 ```
+3.    Start up the web application container.
 Or
 
-1.    Execute the commands (if using Tomcat 6):
+1.    Shut down the web application container in which you deployed OpenAM.
+2.    Execute the commands:
 ```bash
 export AM_DIR=/usr/share/tomcat6/webapps/openam
 rm -fr $AM_DIR/XUI/locales/ja
@@ -76,8 +79,8 @@ rm -f $AM_DIR/config/auth/default_ja/DeviceIdMatch.xml $AM_DIR/config/auth/defau
 rm -fr $AM_DIR/config/auth/default_ja_bak
 mv -f $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
 mv -f $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
-service tomcat6 restart
 ```
+3.    Start up the web application container.
 
 License
 ------

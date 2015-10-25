@@ -3,8 +3,7 @@ OpenAM 12.0.0 日本語化ファイル
 
 ビルド方法
 ------
-匿名でソースコードをチェックアウトするには、SVNクライアント 1.6.xが必要です。
-ビルドにはApache Maven 3.0.xが必要です。
+匿名でソースコードをチェックアウトするには、SVNクライアント 1.6.xが必要です。また、ビルドにはApache Maven 3.0.xが必要です。
 
 1.    "Download ZIP"ボタンをクリックし、openam1200-japanese-properties-master.zipをダウンロード。
 2.    以下のコマンドを実行:
@@ -24,17 +23,19 @@ mvn -DskipTests=true clean install
 ------
 ビルドせずに既存のOpenAMにデプロイする場合は、以下の手順を実行する。
 
-1.    以下のコマンドを実行(Tomcatの場合):
+1.    OpenAMがデプロイされているWebアプリケーションコンテナを停止。
+2.    以下のコマンドを実行:
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/deploy-jp-files.sh
 chmod +x deploy-jp-files.sh
 ./deploy-jp-files.sh
-service tomcat6 restart
 ```
+3.    Webアプリケーションコンテナを起動。
 または
 
 1.    "Download ZIP"ボタンをクリックし、openam1200-japanese-properties-master.zipをダウンロード。
-2.    以下のコマンドを実行(Tomcatの場合):
+2.    OpenAMがデプロイされているWebアプリケーションコンテナを停止。
+3.    以下のコマンドを実行:
 ```bash
 export AM_DIR=/usr/share/tomcat6/webapps/openam
 mkdir -p $AM_DIR/XUI/locales/ja/
@@ -51,21 +52,23 @@ cp -rf openam1200-japanese-properties-master/openam-server-only/src/main/webapp/
 find openam1200-japanese-properties-master -name '*.properties' -print | xargs cp -t $AM_DIR/WEB-INF/classes/
 rm -fr openam1200-japanese-properties-master
 rm openam1200-japanese-properties-master.zip
-service tomcat6 restart
 ```
+4.    Webアプリケーションコンテナを起動。
 
 デプロイしたファイルを削除する方法
 ------
-1.    以下のコマンドを実行(Tomcatの場合):
+1.    OpenAMがデプロイされているWebアプリケーションコンテナを停止。
+2.    以下のコマンドを実行:
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/undeploy-jp-files.sh
 chmod +x undeploy-jp-files.sh
 ./undeploy-jp-files.sh
-service tomcat6 restart
 ```
+3.    Webアプリケーションコンテナを起動。
 または
 
-1.    以下のコマンドを実行(Tomcatの場合):
+1.    OpenAMがデプロイされているWebアプリケーションコンテナを停止。
+2.    以下のコマンドを実行:
 ```bash
 export AM_DIR=/usr/share/tomcat6/webapps/openam
 rm -fr $AM_DIR/XUI/locales/ja
@@ -76,8 +79,8 @@ rm -f $AM_DIR/config/auth/default_ja/DeviceIdMatch.xml $AM_DIR/config/auth/defau
 rm -fr $AM_DIR/config/auth/default_ja_bak
 mv -f $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
 mv -f $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
-service tomcat6 restart
 ```
+3.    Webアプリケーションコンテナを起動。
 
 ライセンス
 ------
