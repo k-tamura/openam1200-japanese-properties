@@ -3,6 +3,9 @@ OpenAM 12.0.0 Japanese properties.
 
 How to build
 ------
+You need SVN client version 1.6.x to checkout code anonymously.
+You need Maven 3.0.x for building.
+
 1.    Click the "Download ZIP" button to download openam1200-japanese-properties-master.zip.
 2.    Execute the commands:
 ```bash
