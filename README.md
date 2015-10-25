@@ -31,6 +31,7 @@ chmod +x deploy-jp-files.sh
 ./deploy-jp-files.sh
 ```
 3.    Start up the web application container.
+
 Or
 
 1.    Click the "Download ZIP" button to download openam1200-japanese-properties-master.zip.
@@ -65,6 +66,7 @@ chmod +x undeploy-jp-files.sh
 ./undeploy-jp-files.sh
 ```
 3.    Start up the web application container.
+
 Or
 
 1.    Shut down the web application container in which you deployed OpenAM.

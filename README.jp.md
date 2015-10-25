@@ -31,6 +31,7 @@ chmod +x deploy-jp-files.sh
 ./deploy-jp-files.sh
 ```
 3.    Webアプリケーションコンテナを起動。
+
 または
 
 1.    "Download ZIP"ボタンをクリックし、openam1200-japanese-properties-master.zipをダウンロード。
@@ -65,6 +66,7 @@ chmod +x undeploy-jp-files.sh
 ./undeploy-jp-files.sh
 ```
 3.    Webアプリケーションコンテナを起動。
+
 または
 
 1.    OpenAMがデプロイされているWebアプリケーションコンテナを停止。
