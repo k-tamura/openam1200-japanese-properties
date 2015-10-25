@@ -23,7 +23,7 @@ mvn -DskipTests=true clean install
 
 1.    以下のコマンドを実行(Tomcatの場合):
 ```bash
-wget --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/deploy-jp-files.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/deploy-jp-files.sh
 chmod +x deploy-jp-files.sh
 ./deploy-jp-files.sh
 service tomcat6 restart
@@ -38,8 +38,8 @@ mkdir -p $AM_DIR/XUI/locales/ja/
 mkdir -p $AM_DIR/policyEditor/locales/ja/
 unzip openam1200-japanese-properties-master.zip
 cp -pr $AM_DIR/config/auth/default_ja $AM_DIR/config/auth/default_ja_bak
-mv $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak
-mv $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak
+mv -f $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak
+mv -f $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak
 cp openam1200-japanese-properties-master/openam-ui-policy/src/main/js/org/forgerock/openam/ui/policy/delegates/SiteConfigurationDelegate.js $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
 cp openam1200-japanese-properties-master/openam-ui-ria/src/main/js/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
 cp -r openam1200-japanese-properties-master/openam-ui-ria/src/main/resources/locales/ja/translation.json $AM_DIR/XUI/locales/ja/
@@ -55,7 +55,7 @@ service tomcat6 restart
 ------
 1.    以下のコマンドを実行(Tomcatの場合):
 ```bash
-wget --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/undeploy-jp-files.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/undeploy-jp-files.sh
 chmod +x undeploy-jp-files.sh
 ./undeploy-jp-files.sh
 service tomcat6 restart
@@ -65,13 +65,13 @@ service tomcat6 restart
 1.    以下のコマンドを実行(Tomcatの場合):
 ```bash
 export AM_DIR=/usr/share/tomcat6/webapps/openam
-rm -fr $AM_DIR/XUI/locales/ja/
-rm -fr $AM_DIR/policyEditor/locales/ja/
-rm -f $AM_DIR/XUI/locales/ja/translation.json
-rm -f $AM_DIR/policyEditor/locales/ja/translation.json
+rm -fr $AM_DIR/XUI/locales/ja
+rm -fr $AM_DIR/policyEditor/locales/ja
 rm -f $AM_DIR/WEB-INF/classes/*_ja.properties
-mv $AM_DIR/config/auth/default_ja_bak $AM_DIR/config/auth/default_ja
-mv $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
-mv $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
+\cp -fr $AM_DIR/config/auth/default_ja_bak/* $AM_DIR/config/auth/default_ja/
+rm -f $AM_DIR/config/auth/default_ja/DeviceIdMatch.xml $AM_DIR/config/auth/default_ja/DeviceIdSave.xml
+rm -fr $AM_DIR/config/auth/default_ja_bak
+mv -f $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
+mv -f $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
 service tomcat6 restart
 ```
