@@ -3,7 +3,7 @@ OpenAM 12.0.0 日本語化ファイル
 
 ビルド方法
 ------
-OpenAMのソースコードをチェックアウトするには、SVNクライアント 1.6.xが必要です。また、ビルドにはApache Maven 3.0.xが必要です。
+※OpenAMのソースコードをチェックアウトするには、SVNクライアント 1.6.xが必要です。また、ビルドにはApache Maven 3.0.xが必要です。
 
 (1) "Download ZIP"ボタンをクリックし、openam1200-japanese-properties-master.zipをダウンロード。  
 (2) 以下のコマンドを実行:  
