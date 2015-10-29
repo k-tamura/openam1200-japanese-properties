@@ -1,5 +1,5 @@
 #!/bin/sh
-# Get the Japanese properties from GitHub.
+# Read a user input (OpenAM installation directory).
 echo "Please input OpenAM installation directory. For example, /usr/share/tomcat6/webapps/openam"
 read AM_DIR
 
