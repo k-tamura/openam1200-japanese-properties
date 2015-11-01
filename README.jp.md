@@ -1,5 +1,5 @@
 # openam1200-japanese-properties
-OpenAM 12.0.0 日本語化ファイル
+OpenAM 12.0.0 日本語化ファイル。
 
 ビルド方法
 ------
