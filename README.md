@@ -7,7 +7,7 @@ You need SVN client version 1.6.x to checkout code anonymously and Maven 3.0.x f
 
 Execute the commands to copy Japanese properties to the OpenAM 12.0.0 source code and build it by Maven:   
 ```bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1300-japanese-properties/master/build-openam-jp.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/build-openam-jp.sh
 chmod +x build-openam-jp.sh
 ./build-openam-jp.sh
 ```
