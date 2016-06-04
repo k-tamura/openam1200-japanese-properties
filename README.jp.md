@@ -9,15 +9,9 @@ OpenAM 12.0.0 日本語化ファイル。以下のいずれかができます。
 
 以下コマンドを実行すると、OpenAM 12.0.0のソースコードをダウンロードし、それに日本語化ファイルをコピーしてMavenでビルドします: 
 ```bash
-unzip openam1200-japanese-properties-master.zip
-rm openam1200-japanese-properties-master/README.*
-rm openam1200-japanese-properties-master/*.sh
-svn co https://svn.forgerock.org/openam/tags/12.0.0/openam/
-cp -r openam1200-japanese-properties-master/* openam/
-rm -fr openam1200-japanese-properties-master
-cd openam
-export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
-mvn -DskipTests=true clean install
+wget -N --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/build-openam-jp.sh
+chmod +x build-openam-jp.sh
+./build-openam-jp.sh
 ```
 
 ビルドせずにデプロイする方法
