@@ -7,8 +7,7 @@ OpenAM 12.0.0 日本語化ファイル。以下のいずれかができます。
 ------
 ※OpenAMのソースコードをチェックアウトするには、SVNクライアント 1.6.xが必要です。また、ビルドにはApache Maven 3.0.xが必要です。
 
-(1) "Download ZIP"ボタンをクリックし、openam1200-japanese-properties-master.zipをダウンロード。  
-(2) 以下のコマンドを実行:  
+以下コマンドを実行すると、OpenAM 12.0.0のソースコードをダウンロードし、それに日本語化ファイルをコピーしてMavenでビルドします: 
 ```bash
 unzip openam1200-japanese-properties-master.zip
 rm openam1200-japanese-properties-master/README.*
@@ -34,30 +33,6 @@ chmod +x deploy-jp-files.sh
 ```
 (3) Webアプリケーションコンテナを起動。  
 
-または
-
-(1) "Download ZIP"ボタンをクリックし、openam1200-japanese-properties-master.zipをダウンロード。  
-(2) OpenAMがデプロイされているWebアプリケーションコンテナを停止。  
-(3) 以下のコマンドを実行:  
-```bash
-export AM_DIR=/usr/share/tomcat6/webapps/openam
-mkdir -p $AM_DIR/XUI/locales/ja/
-mkdir -p $AM_DIR/policyEditor/locales/ja/
-unzip openam1200-japanese-properties-master.zip
-cp -pr $AM_DIR/config/auth/default_ja $AM_DIR/config/auth/default_ja_bak
-mv -f $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak
-mv -f $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak
-cp openam1200-japanese-properties-master/openam-ui-policy/src/main/js/org/forgerock/openam/ui/policy/delegates/SiteConfigurationDelegate.js $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
-cp openam1200-japanese-properties-master/openam-ui-ria/src/main/js/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
-cp -r openam1200-japanese-properties-master/openam-ui-ria/src/main/resources/locales/ja/translation.json $AM_DIR/XUI/locales/ja/
-cp -r openam1200-japanese-properties-master/openam-ui-policy/src/main/resources/locales/ja/translation.json $AM_DIR/policyEditor/locales/ja/
-cp -rf openam1200-japanese-properties-master/openam-server-only/src/main/webapp/config/auth/default_ja/* $AM_DIR/config/auth/default_ja/
-find openam1200-japanese-properties-master -name '*.properties' -print | xargs cp -t $AM_DIR/WEB-INF/classes/
-rm -fr openam1200-japanese-properties-master
-rm openam1200-japanese-properties-master.zip
-```
-(4) Webアプリケーションコンテナを起動。  
-
 デプロイしたファイルを削除する方法
 ------
 (1) OpenAMがデプロイされているWebアプリケーションコンテナを停止。  
@@ -66,23 +41,6 @@ rm openam1200-japanese-properties-master.zip
 wget -N --no-check-certificate https://raw.githubusercontent.com/k-tamura/openam1200-japanese-properties/master/undeploy-jp-files.sh
 chmod +x undeploy-jp-files.sh
 ./undeploy-jp-files.sh
-```
-(3) Webアプリケーションコンテナを起動。  
-
-または
-
-(1) OpenAMがデプロイされているWebアプリケーションコンテナを停止。  
-(2) 以下のコマンドを実行:  
-```bash
-export AM_DIR=/usr/share/tomcat6/webapps/openam
-rm -fr $AM_DIR/XUI/locales/ja
-rm -fr $AM_DIR/policyEditor/locales/ja
-rm -f $AM_DIR/WEB-INF/classes/*_ja.properties
-\cp -fr $AM_DIR/config/auth/default_ja_bak/* $AM_DIR/config/auth/default_ja/
-rm -f $AM_DIR/config/auth/default_ja/DeviceIdMatch.xml $AM_DIR/config/auth/default_ja/DeviceIdSave.xml
-rm -fr $AM_DIR/config/auth/default_ja_bak
-mv -f $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js.bak $AM_DIR/policyEditor/org/forgerock/openam/ui/policy/SiteConfigurationDelegate.js
-mv -f $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js.bak $AM_DIR/XUI/org/forgerock/openam/ui/common/delegates/SiteConfigurationDelegate.js
 ```
 (3) Webアプリケーションコンテナを起動。  
 
