@@ -10,11 +10,11 @@ wget --no-check-certificate https://codeload.github.com/k-tamura/openam1200-japa
 # Copy the Japanese properties to OpenAM 12 source code.
 rm -fr openam-12.0.0
 unzip 12.0.0.zip
-unzip openam1300-japanese-properties-master.zip
-rm openam1300-japanese-properties-master/README.*
-rm openam1300-japanese-properties-master/*.sh
-\cp -r openam1300-japanese-properties-master/* openam-12.0.0/
-rm -fr openam1300-japanese-properties-master
+unzip openam1200-japanese-properties-master.zip
+rm openam1200-japanese-properties-master/README.*
+rm openam1200-japanese-properties-master/*.sh
+\cp -r openam1200-japanese-properties-master/* openam-12.0.0/
+rm -fr openam1200-japanese-properties-master
 cd openam-12.0.0
 
 # Read a user input (path to mvn command).
